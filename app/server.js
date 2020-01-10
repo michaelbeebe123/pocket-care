@@ -14,11 +14,12 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
 }
-
 app.use(routes);
 
+
 // CONNECTING TO THE MONGO DB
-mongoose.connect(process.env.MONGODB_URI) || "PATH TO DB"
+// TODO: ADD THE PATH TO THE DB
+mongoose.connect(process.env.MONGODB_URI) || ""
 
 app.listen(PORT, function() {
     app.listen(PORT, function() {
