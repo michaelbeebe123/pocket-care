@@ -18,8 +18,8 @@ app.use(routes);
 
 
 // CONNECTING TO THE MONGO DB
-// TODO: ADD THE PATH TO THE DB
-mongoose.connect(process.env.MONGODB_URI) || ""
+// FIXME: MAKE SURE THE PATH TO THE DB IS CORRECT
+mongoose.connect(process.env.MONGODB_URI) || "mongodb://localhost/pocket-care"
 
 app.listen(PORT, function() {
     app.listen(PORT, function() {
