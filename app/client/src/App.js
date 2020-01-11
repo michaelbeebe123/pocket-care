@@ -4,10 +4,12 @@ import {About, Form, Login, Prescriptions} from "./pages";
 import {Calendar, Jumbotron, Nav} from "./components";
 
 function App() {
-  <Router>
-    <Jumbotron></Jumbotron>
-    <Nav></Nav>
-  </Router>
+  return (
+    <Router>
+      <Jumbotron></Jumbotron>
+      <Nav></Nav>
+    </Router>
+    );
 }
 
 export default App;
