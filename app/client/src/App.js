@@ -1,7 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import {About, Form, Login, Prescriptions} from "./pages";
-import {Calendar, Jumbotron, Nav} from "./components";
+import About from "./pages/About";
+import Form from "./pages/Form";
+import Login from "./pages/Login";
+import Prescriptions from "./pages/Prescriptions";
+import Calender from "./components/Calendar";
+import Jumbotron from "./components/Jumbotron";
+import Nav from "./components/Nav";
 
 function App() {
   return (
