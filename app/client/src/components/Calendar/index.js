@@ -1,17 +1,16 @@
-import React from "react";
-import { Calendar } from '@fullcalendar/core';
-import dayGridPlugin from '@fullcalendar/daygrid';
-import timeGridPlugin from '@fullcalendar/timegrid';
-import listPlugin from '@fullcalendar/list';
+import React from 'react'
+import FullCalendar from '@fullcalendar/react'
+import dayGridPlugin from '@fullcalendar/daygrid'
 
-document.addEventListener('DOMContentLoaded', function() {
-    var calendarEl = document.getElementById('calendar');
-  
-    var calendar = new Calendar(calendarEl, {
-      plugins: [ dayGridPlugin, timeGridPlugin, listPlugin ]
-    });
-  
-    calendar.render();
-  });
+// import './main.scss' // webpack must be configured to do this
 
-export default Calendar;
+export default class Calendar extends React.Component {
+
+  render() {
+    return (
+      <FullCalendar defaultView="dayGridMonth" plugins={[ dayGridPlugin ]} />
+    )
+  }
+
+}
+
