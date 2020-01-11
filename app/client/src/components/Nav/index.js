@@ -5,16 +5,16 @@ function Nav() {
     return (
         <ul className="nav nav-tabs">
             <li className="nav-item">
-                <a className="nav-link" href="#">Home</a>
+                <a className="nav-link" href="/home">Home</a>
             </li>
             <li className="nav-item">
-                <a className="nav-link" href="#">Medical History</a>
+                <a className="nav-link" href="/form">Medical History</a>
             </li>
             <li className="nav-item">
-                <a className="nav-link" href="#">Appointments</a>
+                <a className="nav-link" href="/appointments">Appointments</a>
             </li>
             <li className="nav-item">
-                <a className="nav-link" href="#">Prescriptions</a>
+                <a className="nav-link" href="/prescriptions">Prescriptions</a>
             </li>
         </ul>
     );
