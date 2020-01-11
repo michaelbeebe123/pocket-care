@@ -5,13 +5,13 @@ const Schema = mongoose.Schema;
 // FIXME: NUMBER OR INTEGER?
 const accountSchema = new Schema({
     id: {type: id},
+    password: {type: String},
     first_name: {type: String, required: true},
     last_name: {type: String, required: true},
     date_of_birth: {type: Date, required: true},
     gender: {type: String},
     medicare: {type: Number},
     military_id: {type: Number},
-    // FIXME: IS WEIGHT / HEIGHT THE CORRECT TYPE?
     weight: {type: Number, required: true},
     height: {type: Number},
     blood_type: {type: String, required: true},
@@ -50,8 +50,8 @@ const accountSchema = new Schema({
                 address: {type: String},
                 phone: {type: Number}
             },
-            // FIXME: THIS PROBABLY WON'T WORK
             other: {
+                specialism: {type: String},
                 name: {type: String},
                 address: {type: String},
                 phone: {type: Number}
