@@ -5,7 +5,7 @@ import {Calendar, Form, Jumbotron, Modal, Nav} from "./components";
 
 function App() {
   <Router>
-    
+    <Jumbotron></Jumbotron>
   </Router>
 }
 
