@@ -12,6 +12,7 @@ import Jumbotron from "./components/Jumbotron";
 import Nav from "./components/Nav";
 import Form from "./components/Form";
 import Prescriptions from "./components/Prescriptions";
+import Appointments from "./components/Appointments";
 
 // ===========================================================================
 
@@ -25,6 +26,7 @@ function App() {
         <Route exact path="/home" component={Calendar}/> */}
         <Route exact path="/form" component={Form} />
         <Route exact path="/prescriptions" component={Prescriptions} />
+        <Route exact path="/appointments" component={Appointments} />
       </Switch>
     </Router>
     );
