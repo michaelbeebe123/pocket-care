@@ -11,6 +11,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Jumbotron from "./components/Jumbotron";
 import Nav from "./components/Nav";
 import Form from "./components/Form";
+import Prescriptions from "./components/Prescriptions";
 
 // ===========================================================================
 
@@ -23,6 +24,7 @@ function App() {
         {/* <Route exact path="/" component={Calendar}/>
         <Route exact path="/home" component={Calendar}/> */}
         <Route exact path="/form" component={Form} />
+        <Route exact path="/prescriptions" component={Prescriptions} />
       </Switch>
     </Router>
     );
