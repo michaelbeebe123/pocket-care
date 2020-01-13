@@ -1,6 +1,5 @@
 import React from 'react';
 
-// TODO: ADD ROUTES
 function Nav() {
     return (
         <ul className="nav nav-tabs">
