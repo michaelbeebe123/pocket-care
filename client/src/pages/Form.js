@@ -25,8 +25,39 @@ import Appointments from "./components/Appointments";
 
 class Form extends Component {
     state = {
-
+        // TODO: ADD DEFAULT STATE VALUES
     }
 
+    componentDidMount() {
+        this.loadForm();
+    }
 
+    loadForm = () => {
+        API.getForm()
+            .then(res =>
+                this.setState({
+                    // TODO:
+                })
+            )
+            .catch(err => console.log(err));
+    };
+
+    deleteEntry = id => {
+        // TODO:
+    };
+
+    handleInputChange = event => {
+        const { name, value } = event.target;
+        this.setState({
+            [name]: value
+        });
+    };
+
+    handleFormSubmit = event => {
+        event.preventDefault();
+        // TODO:
+    }
 }
+
+// TODO:
+// render() {};
