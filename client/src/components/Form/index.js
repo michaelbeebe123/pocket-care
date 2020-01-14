@@ -321,5 +321,3 @@ export function SpecialNeeds(props) {
       </div>
     );
 };
-
-export default Form;
