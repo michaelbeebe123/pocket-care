@@ -1,7 +1,9 @@
 import React from 'react';
 
+// -----------------------------------------------------------------------------------------------------------------
 // TODO: I THINK THIS MIGHT BE MORE READABLE AND EASIER TO WORK WITH IF WE BROKE DOWN EACH PART OF THE FORM
 //       INTO DIFFERENT FUNCTIONS. KIND OF LIKE THE FOLLOWING:
+// -----------------------------------------------------------------------------------------------------------------
 
 // export function Input(props) {
 //     return (
@@ -27,6 +29,14 @@ import React from 'react';
 //     );
 //   }
 
+// -----------------------------------------------------------------------------------------------------------------
+// TODO: ALSO, IN ORDER TO INPUT DATA FROM THE DB WE ARE GOING TO WANT TO USE PROPS, THIS COMPONENT AS IT IS IS NOT
+//       SET UP TO DYNAMICALLY RENDER INFORMATION
+// -----------------------------------------------------------------------------------------------------------------
+
+// =========================================================================================================
+
+// FIXME:
 function Form() {
     return (
         <div class="accordion" id="accordionExample">
