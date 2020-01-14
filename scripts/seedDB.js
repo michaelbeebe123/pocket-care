@@ -1,6 +1,12 @@
+// ---------------------------------
+// DEPENDENCIES
+// ---------------------------------
 const mongoose = require("mongoose");
 const db = require("../models")
 
+// ---------------------------------
+// CONNECTING TO MONGO DB
+// ---------------------------------
 mongoose.connect(
     process.env.MONGODB_URI ||
     "mongodb://localhost/pocket-care"

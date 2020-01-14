@@ -1,4 +1,6 @@
+// ---------------------------------
 // DEPENDENCIES
+// ---------------------------------
 const express = require("express");
 const mongoose = require("mongoose");
 const routes = require("./routes")
@@ -6,18 +8,23 @@ const app = express();
 
 const PORT = process.env.PORT || 3001;
 
+// ---------------------------------
 // MIDDLEWARE
+// ---------------------------------
 app.use(express.urlencoded({ extended:true }));
 app.use(express.json());
 
+// ---------------------------------
 // SERVING STATIC ASSETS
+// ---------------------------------
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
 }
 app.use(routes);
 
-
+// ---------------------------------
 // CONNECTING TO THE MONGO DB
+// ---------------------------------
 // FIXME: MAKE SURE THE PATH TO THE DB IS CORRECT
 mongoose.connect(process.env.MONGODB_URI) || "mongodb://localhost/pocket-care"
 
