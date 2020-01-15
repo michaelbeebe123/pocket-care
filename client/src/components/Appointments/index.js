@@ -4,4 +4,4 @@ function AppointmentsComponent() {
     // return ()
 }
 
-export default Appointments;
+export default AppointmentsComponent;

@@ -19,4 +19,4 @@ function NavComponent() {
     );
 }
 
-export default Nav;
+export default NavComponent;
