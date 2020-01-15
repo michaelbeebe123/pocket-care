@@ -1,9 +1,11 @@
 // TODO: WE PROBABLY DON'T NEED THIS FILE
 
-import React, { Component } from "react";
-import Jumbotron from "../components/Jumbotron";
-import Nav from "../components/Nav";
-import Calendar from "../components/Calendar/Calendar";
+import JumbotronComponent from "./components/Jumbotron";
+import NavComponent from "./components/Nav";
+import {General, Allergies, SpecialNeeds} from "./components/Form";
+import PrescriptionsComponent from "./components/Prescriptions";
+import AppointmentsComponent from "./components/Appointments";
+
  function About() {
    return(
       <Calendar
