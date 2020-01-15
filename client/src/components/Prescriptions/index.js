@@ -9,7 +9,7 @@ import React from 'react';
 var axios = require("axios");
 
 
-function Prescriptions() {
+function PrescriptionsComponent() {
     return
 }
 

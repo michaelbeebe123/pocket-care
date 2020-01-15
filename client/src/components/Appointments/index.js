@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Appointments() {
+function AppointmentsComponent() {
     // return ()
 }
 
