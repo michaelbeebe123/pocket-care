@@ -21,6 +21,7 @@ import {General, Allergies, SpecialNeeds} from "./components/Form";
 import PrescriptionsComponent from "./components/Prescriptions";
 import AppointmentsComponent from "./components/Appointments";
 
+
 // ===========================================================================
 
 function App() {
@@ -29,9 +30,9 @@ function App() {
       <Jumbotron />
       <Nav />
       <Switch>
-        {/* <Route exact path="/" component={Calendar}/>
-        <Route exact path="/home" component={Calendar}/> */}
-        <Route exact path="/form" component={Form} />
+        <Route exact path="/" component={Calendar}/>
+        <Route exact path="/home" component={Calendar}/> 
+        {/* {/<Route exact path="/form" component={Form} /> */}
         <Route exact path="/prescriptions" component={Prescriptions} />
         <Route exact path="/appointments" component={Appointments} />
       </Switch>
