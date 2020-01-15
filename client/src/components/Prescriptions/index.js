@@ -13,4 +13,4 @@ function PrescriptionsComponent() {
     return
 }
 
-export default Prescriptions
+export default PrescriptionsComponent

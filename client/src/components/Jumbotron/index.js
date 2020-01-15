@@ -11,4 +11,4 @@ function JumbotronComponent({ children }) {
   );
 }
 
-export default Jumbotron;
+export default JumbotronComponent;
