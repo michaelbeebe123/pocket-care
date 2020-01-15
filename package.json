@@ -20,14 +20,23 @@
     "nodemon": "^1.18.7"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@fullcalendar/core": "^4.3.1",
     "@fullcalendar/daygrid": "^4.3.0",
     "@fullcalendar/list": "^4.3.0",
     "@fullcalendar/timegrid": "^4.3.0",
+=======
+    "Express": "^3.0.1",
+>>>>>>> 584e6b74614c0c0f15bef17b7d3930d55aaf5114
     "axios": "^0.18.0",
-    "express": "^4.16.3",
+    "bcrypt": "^3.0.7",
+    "bcrypt-nodejs": "0.0.3",
+    "express": "^4.17.1",
+    "express-generator": "^4.16.1",
+    "express-session": "^1.17.0",
     "if-env": "^1.0.4",
     "mongoose": "^5.3.16",
+    "passport": "^0.4.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-google-calendar-api": "^1.0.11",
