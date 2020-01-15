@@ -17,11 +17,11 @@ import API from "../utils/API";
 // IMPORTING COMPONENTS
 // ---------------------------------
 // import Calendar from "./components/Calendar";
-import Jumbotron from "./components/Jumbotron";
-import Nav from "./components/Nav";
-import Form from "./components/Form";
-import Prescriptions from "./components/Prescriptions";
-import Appointments from "./components/Appointments";
+import JumbotronComponent from "../components/Jumbotron";
+import NavComponent from "../components/Nav";
+import {General, Allergies, SpecialNeeds} from "../components/Form";
+import PrescriptionsComponent from "../components/Prescriptions";
+import AppointmentsComponent from "../components/Appointments";
 
 class Form extends Component {
     state = {

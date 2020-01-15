@@ -9,7 +9,7 @@ import listPlugin from '@fullcalendar/list'
 
 // import './main.scss' // webpack must be configured to do this
 
-export default class Calendar extends React.Component {
+export default class CalendarComponent extends React.Component {
 
   render() {
     return (

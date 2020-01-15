@@ -14,7 +14,7 @@ import Prescriptions from "./pages/Prescriptions";
 // ---------------------------------
 // IMPORTING COMPONENTS
 // ---------------------------------
-// import Calendar from "./components/Calendar";
+import CalendarComponent from "./components/Calendar";
 import JumbotronComponent from "./components/Jumbotron";
 import NavComponent from "./components/Nav";
 import {General, Allergies, SpecialNeeds} from "./components/Form";
@@ -27,14 +27,14 @@ import AppointmentsComponent from "./components/Appointments";
 function App() {
   return (
     <Router>
-      <Jumbotron />
-      <Nav />
+      <JumbotronComponent />
+      <NavComponent />
       <Switch>
-        <Route exact path="/" component={Calendar}/>
-        <Route exact path="/home" component={Calendar}/> 
-        {/* {/<Route exact path="/form" component={Form} /> */}
-        <Route exact path="/prescriptions" component={Prescriptions} />
-        <Route exact path="/appointments" component={Appointments} />
+        <Route exact path="/" component={CalendarComponent}/>
+        <Route exact path="/home" component={CalendarComponent}/> 
+        /<Route exact path="/form" component={General, Allergies, SpecialNeeds} />
+        <Route exact path="/prescriptions" component={PrescriptionsComponent} />
+        <Route exact path="/appointments" component={AppointmentsComponent} />
       </Switch>
     </Router>
     );

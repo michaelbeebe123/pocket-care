@@ -20,14 +20,11 @@
     "nodemon": "^1.18.7"
   },
   "dependencies": {
-<<<<<<< HEAD
     "@fullcalendar/core": "^4.3.1",
     "@fullcalendar/daygrid": "^4.3.0",
     "@fullcalendar/list": "^4.3.0",
     "@fullcalendar/timegrid": "^4.3.0",
-=======
     "Express": "^3.0.1",
->>>>>>> 584e6b74614c0c0f15bef17b7d3930d55aaf5114
     "axios": "^0.18.0",
     "bcrypt": "^3.0.7",
     "bcrypt-nodejs": "0.0.3",
