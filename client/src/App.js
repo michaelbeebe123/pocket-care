@@ -6,20 +6,20 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // ---------------------------------
 // IMPORTING PAGES
 // ---------------------------------
-// import About from "./pages/About";
-// import Form from "./pages/Form";
-// import Login from "./pages/Login";
-// import Prescriptions from "./pages/Prescriptions";
+import Calendar from "./pages/Calendar";
+import Form from "./pages/Form";
+import Login from "./pages/Login";
+import Prescriptions from "./pages/Prescriptions";
 
 // ---------------------------------
 // IMPORTING COMPONENTS
 // ---------------------------------
 // import Calendar from "./components/Calendar";
-import Jumbotron from "./components/Jumbotron";
-import Nav from "./components/Nav";
-import Form from "./components/Form";
-import Prescriptions from "./components/Prescriptions";
-import Appointments from "./components/Appointments";
+import JumbotronComponent from "./components/Jumbotron";
+import NavComponent from "./components/Nav";
+import {General, Allergies, SpecialNeeds} from "./components/Form";
+import PrescriptionsComponent from "./components/Prescriptions";
+import AppointmentsComponent from "./components/Appointments";
 
 // ===========================================================================
 
