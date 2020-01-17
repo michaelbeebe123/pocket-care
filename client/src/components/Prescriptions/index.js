@@ -1,16 +1,22 @@
-// ---------------------------------
-// DEPENDENCIES
-// ---------------------------------
-import React from 'react';
-
-// ---------------------------------
-// AXIOS WILL BE USED TO MAKE THE CALLS TO THE PRESCRIPTIONS API
-// ---------------------------------
-var axios = require("axios");
-
-
-function PrescriptionsComponent() {
-    return
-}
-
-export default PrescriptionsComponent
+import React from "react";
+export function Input(props) {
+    return (
+      <div className="form-group">
+        <input className="form-control" {...props} />
+      </div>
+    );
+  }
+  export function FormButton(props) {
+    return (
+      <button {...props} style={{ float: "right", marginBottom: 10 }} className="btn btn-success">
+        {props.children}
+      </button>
+    );
+  }
+  export function DeleteButton(props) {
+    return (
+      <span className="delete-btn" {...props} role="button" tabIndex="0">
+        ✗
+      </span>
+    );
+  }
