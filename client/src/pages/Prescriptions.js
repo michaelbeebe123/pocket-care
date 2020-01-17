@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import DeleteBtn from "../components/DeleteBtn";
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
 import { Link } from "react-router-dom";
@@ -52,7 +51,9 @@ class Prescriptions extends Component {
       <Container fluid>
         <Row>
           <Col size="md-6">
-            <Jumbotron> <h1>My Current Medication List</h1> </Jumbotron>
+            <Jumbotron>
+              <h1>My Current Medication List</h1>
+            </Jumbotron>
 
             <form>
               <Input
@@ -78,9 +79,10 @@ class Prescriptions extends Component {
                 onClick={this.handleFormSubmit}
               >
                 Submit Prescription
-              />
-            />
-          />
+              </FormButton>
+            </form>
+            
+          </Col>
           <Col size="md-6 sm-12">
             <Jumbotron>
               <h1>Current Medications</h1>
@@ -94,16 +96,16 @@ class Prescriptions extends Component {
                         {prescription.date} by {prescription.phone}
                       </strong>
                     </Link>
-                    <DeleteBtn onClick={() => this.deletePrescription(prescription._id)} />
+                    <DeleteButton onClick={() => this.deletePrescription(prescription._id)} />
                   </ListItem>
                 ))}
               </List>
             ) : (
               <h3>No Results to Display</h3>
             )}
-          />
-        />
-      />
+          </Col>
+        </Row>
+      </Container>
     );
   }
 }
