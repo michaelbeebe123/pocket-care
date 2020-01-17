@@ -26,7 +26,6 @@
     "@fullcalendar/timegrid": "^4.3.0",
     "Express": "^3.0.1",
     "axios": "^0.18.0",
-    "bcrypt": "^3.0.7",
     "bcrypt-nodejs": "0.0.3",
     "express": "^4.17.1",
     "express-generator": "^4.16.1",
