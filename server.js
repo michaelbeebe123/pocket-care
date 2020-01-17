@@ -9,10 +9,6 @@ const app = express();
 
 const PORT = process.env.PORT || 3001;
 
-
-
-
-
 // ---------------------------------
 // CONFIGURING PASSPORT
 // ---------------------------------
@@ -71,11 +67,6 @@ passport.use('login', new LocalStrategy({
     );
 }));
 
-
-
-
-
-
 // ---------------------------------
 // MIDDLEWARE
 // ---------------------------------
@@ -93,7 +84,6 @@ app.use(routes);
 // ---------------------------------
 // CONNECTING TO THE MONGO DB
 // ---------------------------------
-// FIXME: MAKE SURE THE PATH TO THE DB IS CORRECT
 mongoose.connect(process.env.MONGODB_URI) || "mongodb://localhost/pocket-care"
 
 app.listen(PORT, function() {
