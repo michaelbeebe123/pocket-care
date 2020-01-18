@@ -6,7 +6,7 @@ import API from "../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
-import { General, SpecialNeeds, Allergies } from "../components/Form";
+import FormComponent from "../components/Form";
 import { Input, FormButton, DeleteButton} from "../components/Prescriptions"
 class Prescriptions extends Component {
   state = {
