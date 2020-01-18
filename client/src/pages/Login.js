@@ -1,45 +1,64 @@
-import JumbotronComponent from "./components/Jumbotron";
-import React from "react";
-import { Col } from "../components/Grid";
-class Prescriptions extends Component {
-  state = {
-    prescriptions: [],
-    date: "",
-    phone: "",
-    dosage: ""
-};
-render() {
-  return (
-    <Container fluid>
-      <Row>
-        <Col size="md-6">
-          <Jumbotron>
-            <h1>Already a member? Log In Here</h1>
-          </Jumbotron>
-          <form>
-            <Input
-              value={this.state.user}
-              onChange={this.handleInputChange}
-              name="user"
-              placeholder="User (Required)"
-            />
-            <Input
-              value={this.state.password}
-              onChange={this.handleInputChange}
-              name="password"
-              placeholder="Password (Required)"
-            />
-            <FormBtn
-              disabled={!(this.state.author && this.state.title)}
-              onClick={this.handleFormSubmit}
-            >
-              Submit Book
-            </FormBtn>
-          </form>
-        </Col>
-      </Row>
-    </Container>
-  );
-}
-}
 
+import CalendarComponent from "../components/Calendar";
+import JumbotronComponent from "../components/Jumbotron";
+import NavComponent from "../components/Nav";
+import {General, Allergies, SpecialNeeds} from "../components/Form";
+import {Input, FormButton, DeleteButton} from "../components/Prescriptions";
+import AppointmentsComponent from "../components/Appointments";
+import React, { PropTypes } from 'react';
+import { Link } from 'react-router';
+import { Card, CardText } from 'material-ui/Card';
+import RaisedButton from 'material-ui/RaisedButton';
+import TextField from 'material-ui/TextField';
+
+
+const LoginForm = ({
+  onSubmit,
+  onChange,
+  errors,
+  user
+}) => (
+  <Card className="container">
+    <form action="/" onSubmit={onSubmit}>
+      <h2 className="card-heading">Login</h2>
+
+      {errors.summary && <p className="error-message">{errors.summary}</p>}
+
+      <div className="field-line">
+        <TextField
+          floatingLabelText="Email"
+          name="email"
+          errorText={errors.email}
+          onChange={onChange}
+          value={user.email}
+        />
+      </div>
+
+      <div className="field-line">
+        <TextField
+          floatingLabelText="Password"
+          type="password"
+          name="password"
+          onChange={onChange}
+          errorText={errors.password}
+          value={user.password}
+        />
+      </div>
+
+      <div className="button-line">
+        <RaisedButton type="submit" label="Log in" primary />
+      </div>
+
+      <CardText>Don't have an account? <Link to={'/signup'}>Create one</Link>.</CardText>
+    </form>
+  </Card>
+);
+
+LoginForm.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
+  errors: PropTypes.object.isRequired,
+  user: PropTypes.object.isRequired
+};
+
+export default LoginForm;
