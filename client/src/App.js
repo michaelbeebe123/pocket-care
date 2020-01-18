@@ -17,7 +17,7 @@ import Prescriptions from "./pages/Prescriptions";
 import CalendarComponent from "./components/Calendar";
 import JumbotronComponent from "./components/Jumbotron";
 import NavComponent from "./components/Nav";
-import {General, Allergies, SpecialNeeds} from "./components/Form";
+// import FormComponent from "./components/Form";
 import {Input, FormButton, DeleteButton} from "./components/Prescriptions";
 import AppointmentsComponent from "./components/Appointments";
 
@@ -30,11 +30,14 @@ function App() {
       <JumbotronComponent />
       <NavComponent />
       <Switch>
-        <Route exact path="/" component={CalendarComponent}/>
+        {/* TODO: MAKE THE Login Component and SignupComponent AND GET IT WORKING WITH NO ERRORS */}
+        {/* <Route exact path="/" component={LoginComponent}/>
+        <Route exact path="/signup" component={SignupComponent} /> */}
         <Route exact path="/home" component={CalendarComponent}/> 
-        <Route exact path="/form" component={ General, Allergies, SpecialNeeds} />
+        {/* TODO: ADD ROUTE TO THE FORM */}
         <Route exact path="/prescriptions" component={Input, FormButton, DeleteButton} />
-        <Route exact path="/appointments" component={AppointmentsComponent} />
+        {/* FIXME: WE PROBABLY DON'T NEED THIS ROUTE, MOST LIKELY NOT USING AN APPOINTMENTS COMPONENT */}
+        {/* <Route exact path="/appointments" component={AppointmentsComponent} /> */}
       </Switch>
     </Router>
     );
