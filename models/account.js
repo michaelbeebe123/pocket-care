@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 // TODO: INPUT ALL OF THE FIELDS THAT WILL PUSHED TO THE DB
 // FIXME: NUMBER OR INTEGER?
 const accountSchema = new Schema({
-    id: {type: id},
+    id: {type: Number},
     password: {type: String},
     first_name: {type: String, required: true},
     last_name: {type: String, required: true},
