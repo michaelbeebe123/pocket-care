@@ -1,6 +1,12 @@
 import axios from "axios";
 
+// TODO: THIS STILL NEEDS WORK
+
 export default {
+  // Gets General info
+  getForm: function() {
+    return axios.get("/api/form");
+  },
   // Gets all prescriptions
   getprescriptions: function() {
     return axios.get("/api/prescriptions");

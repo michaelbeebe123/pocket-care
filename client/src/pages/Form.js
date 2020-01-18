@@ -7,8 +7,6 @@ import API from "../utils/API";
 // ---------------------------------
 // IMPORTING PAGES
 // ---------------------------------
-// import About from "./pages/About";
-// import Form from "./pages/Form";
 // import Login from "./pages/Login";
 // import Prescriptions from "./pages/Prescriptions";
 
@@ -16,7 +14,6 @@ import API from "../utils/API";
 // ---------------------------------
 // IMPORTING COMPONENTS
 // ---------------------------------
-// import Calendar from "./components/Calendar";
 import CalendarComponent from "../components/Calendar";
 import JumbotronComponent from "../components/Jumbotron";
 import NavComponent from "../components/Nav";
@@ -26,8 +23,18 @@ import AppointmentsComponent from "../components/Appointments";
 
 class Form extends Component {
     state = {
+        forms: [],
+        first_name: "",
+        last_name: "",
+        date_of_birth: "",
+        gender: "",
+        medicare: "",
+        military_id: "",
+        weight: "",
+        height: "",
+        blood_type: ""
         // TODO: ADD DEFAULT STATE VALUES
-    }
+    };
 
     componentDidMount() {
         this.loadForm();
@@ -37,6 +44,16 @@ class Form extends Component {
         API.getForm()
             .then(res =>
                 this.setState({
+                    forms: res.data,
+                    first_name: "",
+                    last_name: "",
+                    date_of_birth: "",
+                    gender: "",
+                    medicare: "",
+                    military_id: "",
+                    weight: "",
+                    height: "",
+                    blood_type: ""
                     // TODO:
                 })
             )
@@ -44,7 +61,10 @@ class Form extends Component {
     };
 
     deleteEntry = id => {
-        // TODO:
+        API.deletePrescription(id)
+            .then(res => this.loadForm())
+            .catch(err => console.log(err));
+                // TODO:
     };
 
     handleInputChange = event => {
@@ -56,9 +76,35 @@ class Form extends Component {
 
     handleFormSubmit = event => {
         event.preventDefault();
+        if (this.state.first_name && this.state.last_name) {
+            API.savePrescription({
+                first_name: this.state.first_name,
+                last_name: this.state.last_name,
+                date_of_birth: this.state.date_of_birth,
+                gender: this.state.gender,
+                medicare: this.state.medicare,
+                military_id: this.state.military_id,
+                weight: this.state.weight,
+                height: this.state.height,
+                blood_type: this.state.blood_type
+            })
+            .then(res => this.loadForm())
+            .catch(err => console.log(err));
+        }
         // TODO:
-    }
-}
+    };
+
 
 // TODO:
-// render() {};
+render() {
+    return (
+        <div className="accordion" id="careTabs">
+            <General />
+            <Allergies />
+            <SpecialNeeds />
+        </div>
+    );
+}
+}
+
+export default Form;
