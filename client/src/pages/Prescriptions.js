@@ -100,9 +100,9 @@ class Prescriptions extends Component {
                     </Link>
                     <DeleteButton onClick={() => this.deletePrescription(prescription._id)} />
                   </ListItem>
-                ))}
+                ))})
               </List>
-            ) : (
+              (
               <h3>No Results to Display</h3>
             )}
           </Col>
