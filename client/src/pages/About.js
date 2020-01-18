@@ -1,10 +1,11 @@
 // TODO: WE PROBABLY DON'T NEED THIS FILE
 
-import JumbotronComponent from "./components/Jumbotron";
-import NavComponent from "./components/Nav";
-import {General, Allergies, SpecialNeeds} from "./components/Form";
-import PrescriptionsComponent from "./components/Prescriptions";
-import AppointmentsComponent from "./components/Appointments";
+import CalendarComponent from "../components/Calendar";
+import JumbotronComponent from "../components/Jumbotron";
+import NavComponent from "../components/Nav";
+import {General, Allergies, SpecialNeeds} from "../components/Form";
+import {Input, FormButton, DeleteButton} from "../components/Prescriptions";
+import AppointmentsComponent from "../components/Appointments";
 import "../../App.css";
  function About() {
    return(

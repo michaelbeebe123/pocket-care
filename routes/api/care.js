@@ -37,5 +37,4 @@ router.route("/submit-prescription")
 router.route("/update-prescription")
     .post(careController.update)
 
-
 module.exports = router;
