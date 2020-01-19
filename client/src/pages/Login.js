@@ -3,9 +3,9 @@ import JumbotronComponent from "../components/Jumbotron";
 import NavComponent from "../components/Nav";
 import {General, Allergies, SpecialNeeds} from "../components/Form";
 import {Input, FormButton, DeleteButton} from "../components/Prescriptions";
-import AppointmentsComponent from "../components/Appointments";
+// import AppointmentsComponent from "../components/Appointments";
 import React, { PropTypes } from 'react';
-import { Link } from 'react-router';
+import { Link } from "react-router-dom";
 import { Card, CardText } from 'material-ui/Card';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
@@ -53,11 +53,11 @@ const LoginForm = ({
   </Card>
 );
 
-LoginForm.propTypes = {
-  onSubmit: PropTypes.func.isRequired,
-  onChange: PropTypes.func.isRequired,
-  errors: PropTypes.object.isRequired,
-  user: PropTypes.object.isRequired
-};
+// LoginForm.propTypes = {
+//   onSubmit: PropTypes.func.isRequired,
+//   onChange: PropTypes.func.isRequired,
+//   errors: PropTypes.object.isRequired,
+//   user: PropTypes.object.isRequired
+// };
 
 export default LoginForm;

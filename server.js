@@ -87,8 +87,7 @@ app.use(routes);
 // ---------------------------------
 mongoose.connect((process.env.MONGODB_URI) || "mongodb://localhost/pocket-care")
 
-app.listen(PORT, function() {
     app.listen(PORT, function() {
         console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`)
     })
-});
+;
