@@ -89,7 +89,7 @@ class Prescriptions extends Component {
             <Jumbotron>
               <h1>Current Medications</h1>
             </Jumbotron>
-            {this.state.prescriptions.length ? (
+            {/* {this.state.prescriptions.length ? (
               <List>
                 {this.state.presciptions.map(prescription => (
                   <ListItem key={prescription._id}>
@@ -104,7 +104,7 @@ class Prescriptions extends Component {
               </List>
               (
               <h3>No Results to Display</h3>
-            )}
+            ) */}
           </Col>
         </Row>
       </Container>
