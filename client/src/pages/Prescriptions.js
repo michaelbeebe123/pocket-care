@@ -3,11 +3,8 @@
 import React, { Component } from "react";
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
-import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
-import { List, ListItem } from "../components/List";
-import FormComponent from "../components/Form";
-import { Input, FormButton, DeleteButton} from "../components/Prescriptions"
+import { Input, FormButton} from "../components/Prescriptions"
 class Prescriptions extends Component {
   state = {
     prescriptions: [],
@@ -27,7 +24,7 @@ class Prescriptions extends Component {
   };
   deletePrescription = id => {
     API.deletePrescription(id)
-      .then(res => this.loadPrescriptions())
+      .then(() => this.loadPrescriptions())
       .catch(err => console.log(err));
   };
   handleInputChange = event => {
@@ -44,7 +41,7 @@ class Prescriptions extends Component {
         phone: this.state.phone,
         dosage: this.state.dosage
       })
-        .then(res => this.loadPrescriptions())
+        .then(() => this.loadPrescriptions())
         .catch(err => console.log(err));
     }
   };
