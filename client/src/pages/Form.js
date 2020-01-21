@@ -217,16 +217,13 @@ class Form extends Component {
   // ----------------------------------
   // TODO: FUNCTION THAT DELETES A FORM ITEM
   // ----------------------------------
-  // deleteFormItem = id => {
-  //   API.deleteFormID(id)
-  //     .then(() => this.loadForm())
-  //     .catch(err => console.log(err));
-  //   };
-
-  
+  deleteFormItem = id => {
+    API.deleteFormID(id)
+      .then(() => this.loadForm())
+      .catch(err => console.log(err));
+    };
   };
 
-  // FIXME:
   render() {
     return (
       <div className="accordion" id="careTabs">
