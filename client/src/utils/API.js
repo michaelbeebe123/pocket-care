@@ -3,7 +3,7 @@ import axios from "axios";
 export default {
 
   // =================================================
-  // TODO: FORM METHODS
+  // FIXME: FORM METHODS
   // =================================================
   // -----------------------------
   // GETS ALL FORM ITEMS
@@ -14,18 +14,20 @@ export default {
   // -----------------------------
   // GETS FORM ITEM BY ID
   // -----------------------------
-  // TODO:
+  getFormID: function() {
+    return axios.get("/api/form" + id)
+  },
   // -----------------------------
   // DELETES FORM ITEM BY ID
   // -----------------------------
   deleteFormID: function() {
-    return axios.post("/update-form")
+    return axios.post("api/update-form")
   },
   // -----------------------------
   // SAVES FORM TO THE DATABASE
   // -----------------------------
   saveForm: function() {
-    return axios.post("/submit-form")
+    return axios.post("api/submit-form")
   },
 
 
@@ -48,13 +50,13 @@ export default {
   // DELETES PRESCRIPTION BY ID
   // -----------------------------
   deletePrescriptionID: function(id) {
-    return axios.delete("/api/prescriptions/" + id);
+    return axios.delete("/api/update-prescriptions/" + id);
   },
   // ---------------------------------------
   // SAVES PRESCRIPTION TO THE DATABASE  
   // ---------------------------------------
   savePrescription: function(prescriptionData) {
-    return axios.post("/api/prescriptions", prescriptionData);
+    return axios.post("/api/submit-prescription", prescriptionData);
   }
 
 };
