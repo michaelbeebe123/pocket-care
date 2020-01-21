@@ -10,10 +10,10 @@ const accountSchema = new Schema({
     last_name: {type: String, required: true},
     date_of_birth: {type: Date, required: true},
     gender: {type: String},
-    medicare: {type: Number},
-    military_id: {type: Number},
-    weight: {type: Number, required: true},
-    height: {type: Number},
+    medicare: String,
+    military_id: String,
+    weight: {type: String, required: true},
+    height: {type: String},
     blood_type: {type: String, required: true},
     allergies: {
         medication_allergies: {type: String},
@@ -26,7 +26,7 @@ const accountSchema = new Schema({
         hearind_aid: {type: Boolean},
         wheelchair: {type: Boolean}
     },
-    disabilities: {type: String},
+    disabilities: {type: Array},
     surgeries: {
         name: {type: String},
         doctor: {type: String},
@@ -37,34 +37,34 @@ const accountSchema = new Schema({
         primary_physician: {
             name: {type: String},
             address: {type: String},
-            phone: {type: Number}
+            phone: {type: String}
         },
         specialists: {
             physical_therapist: {
                 name: {type: String},
                 address: {type: String},
-                phone: {type: Number}
+                phone: {type: String}
             },
             dentist: {
                 name: {type: String},
                 address: {type: String},
-                phone: {type: Number}
+                phone: {type: String}
             },
             other: {
                 specialism: {type: String},
                 name: {type: String},
                 address: {type: String},
-                phone: {type: Number}
+                phone: {type: String}
             }
         } 
     },
     pharmacy: {
         address: {type: String},
-        phone: {type: Number}
+        phone: {type: String}
     },
     insurance: {
         provider: {type: String},
-        account_number: {type: Number}
+        account_number: {type: String}
     },
     medication: {
         name: {type: String},

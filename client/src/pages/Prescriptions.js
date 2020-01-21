@@ -15,6 +15,7 @@ class Prescriptions extends Component {
   componentDidMount() {
     this.loadPrescriptions();
   }
+
   loadPrescriptions = () => {
     API.getPrescriptions()
       .then(res =>
@@ -22,17 +23,20 @@ class Prescriptions extends Component {
       )
       .catch(err => console.log(err));
   };
+
   deletePrescription = id => {
     API.deletePrescription(id)
       .then(() => this.loadPrescriptions())
       .catch(err => console.log(err));
   };
+
   handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({
       [name]: value
     });
   };
+
   handleFormSubmit = event => {
     event.preventDefault();
     if (this.state.date && this.state.phone) {
@@ -45,6 +49,7 @@ class Prescriptions extends Component {
         .catch(err => console.log(err));
     }
   };
+  
   render() {
     return (
       <Container fluid>
