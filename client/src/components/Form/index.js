@@ -1,7 +1,7 @@
-import React, { Children } from "react";
+import React from "react";
 // =========================================================================================================
 
-export function General(props) {
+export function General() {
   // TODO: ASK LOGAN HOW TO USE PROPS
   return (
     <div className="card">
@@ -14,15 +14,76 @@ export function General(props) {
       </div>
       <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#careTabs">
         <div class="card-body">
-            // FIXME:
-            {Children}
+
+            <form>
+              <div className="form-group">
+                <label for="formGroupExampleInput">First Name</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="First Name"></input>
+              </div>
+
+              <div className="form-group">
+                <label for="formGroupExampleInput">Last Name</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Last Name"></input>
+              </div>
+
+              {/* FIXME: */}
+              <div className="form-group">
+                <label for="formGroupExampleInput">Date of Birth</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="YYYY-MM-DD"></input>
+              </div>
+
+              <div className="form-group">
+                <label for="formGroupExampleInput">Date of Birth</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="YYYY-MM-DD"></input>
+              </div>
+
+              <div className="form-group">
+                <label for="formGroupExampleInput">Gender</label>
+                <select class="custom-select" id="inputGroupSelect01">
+                  <option selected>Choose...</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                </select>
+              </div>
+
+              <div className="form-group">
+                <label for="formGroupExampleInput">Medicare Number</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="0000-000-0000"></input>
+              </div>
+
+              <div className="form-group">
+                <label for="formGroupExampleInput">Military ID</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="0000-000-0000"></input>
+              </div>
+
+              <div className="form-group">
+                <label for="formGroupExampleInput">Weight</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="000"></input>
+              </div>
+
+              <div className="form-group">
+                <label for="formGroupExampleInput">Blood Type</label>
+                <select class="custom-select" id="inputGroupSelect01">
+                  <option selected>Choose...</option>
+                  <option value="O-Negative">O Negative</option>
+                  <option value="O-Positive">O Positive</option>
+                  <option value="A-Negative">A Negative</option>
+                  <option value="A-Positive">A Positive</option>
+                  <option value="B-Negative">B Negative</option>
+                  <option value="B-Positive">B Positive</option>
+                  <option value="AB-negative">AB Negative</option>
+                  <option value="AB-positive">AB Positive</option>
+                </select>
+              </div>
+            </form>
+
         </div>
       </div>
     </div>
   )
 }
 
-export function Allergies(props) {
+export function Allergies() {
   return (
     <div className="card">
       <div className="card-header" id="headingTwo">
@@ -33,16 +94,24 @@ export function Allergies(props) {
         </h2>
       </div>
       <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#careTabs">
-        <div class="card-body">
-            // FIXME:
-            {Children}
+        <div class="card-body">     
+            <form>
+              <div className="form-group">
+                <label for="formGroupExampleInput">Medication Allergies</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Seperate with commmas"></input>
+              </div>
+              <div className="form-group">
+                <label for="formGroupExampleInput">Food Allergies</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Seperate with commmas"></input>
+              </div>
+            </form>
         </div>
       </div>
     </div>
   )
 }
 
-export function SpecialNeeds(props) {
+export function SpecialNeeds() {
   return (
     <div className="card">
       <div className="card-header" id="headingThree">
@@ -54,15 +123,14 @@ export function SpecialNeeds(props) {
       </div>
       <div id="collapseThree" class="collapse show" aria-labelledby="headingThree" data-parent="#careTabs">
         <div class="card-body">
-            // FIXME:
-            {Children}
+            {/* TODO: */}
         </div>
       </div>
     </div>
   )
 }
 
-export function DoctorInformation(props) {
+export function DoctorInformation() {
   return (
     <div className="card">
       <div className="card-header" id="headingFour">
@@ -74,8 +142,7 @@ export function DoctorInformation(props) {
       </div>
       <div id="collapseFour" class="collapse show" aria-labelledby="headingFour" data-parent="#careTabs">
         <div class="card-body">
-            // FIXME:
-            {Children}
+            {/* // TODO: */}
         </div>
       </div>
     </div>

@@ -3,7 +3,7 @@
 // ---------------------------------
 import React, { Component } from "react";
 import API from "../utils/API";
-import { General, Allergies, SpecialNeeds } from "../components/Form";
+import { General, Allergies, SpecialNeeds, DoctorInformation } from "../components/Form";
 
 // ==================================================================================
 class Form extends Component {
@@ -93,24 +93,15 @@ class Form extends Component {
   // ----------------------------------------
   // TODO: RENDERS THE FORM TO THE PAGE
   // ----------------------------------------
-  loadForm = () => {
-    API.getForm()
-      .then(res =>
-        this.setState({
-          forms: res.data,
-          first_name: "",
-          last_name: "",
-          date_of_birth: "",
-          gender: "",
-          medicare: "",
-          military_id: "",
-          weight: "",
-          height: "",
-          blood_type: ""
-        })
-      )
-      .catch(err => console.log(err));
-  };
+  // loadForm = () => {
+  //   API.getForm()
+  //     .then(res =>
+  //       this.setState({
+  //         TODO:
+  //       })
+  //     )
+  //     .catch(err => console.log(err));
+  // };
 
   componentDidMount() {
     this.loadForm();
@@ -217,11 +208,11 @@ class Form extends Component {
   // ----------------------------------
   // TODO: FUNCTION THAT DELETES A FORM ITEM
   // ----------------------------------
-  deleteFormItem = id => {
-    API.deleteFormID(id)
-      .then(() => this.loadForm())
-      .catch(err => console.log(err));
-    };
+  // deleteFormItem = id => {
+  //   API.deleteFormID(id)
+  //     .then(() => this.loadForm())
+  //     .catch(err => console.log(err));
+  //   };
   };
 
   render() {
@@ -230,8 +221,11 @@ class Form extends Component {
         <General />
         <Allergies />
         <SpecialNeeds />
+        <DoctorInformation />
       </div>
     );
-  }
+  };
 }
+
+
 export default Form;

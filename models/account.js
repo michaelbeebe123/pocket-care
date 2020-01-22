@@ -26,7 +26,7 @@ const accountSchema = new Schema({
         hearind_aid: {type: Boolean},
         wheelchair: {type: Boolean}
     },
-    disabilities: {type: Array},
+    disabilities: {type: String},
     surgeries: {
         name: {type: String},
         doctor: {type: String},

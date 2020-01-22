@@ -14,9 +14,9 @@ export default {
   // -----------------------------
   // GETS FORM ITEM BY ID
   // -----------------------------
-  getFormID: function() {
-    return axios.get("/api/form" + id)
-  },
+  // getFormID: function() {
+  //   return axios.get("/api/form" + id)
+  // },
   // -----------------------------
   // DELETES FORM ITEM BY ID
   // -----------------------------
@@ -43,15 +43,15 @@ export default {
   // -----------------------------
   // GETS PRESCRIPTION BY ID 
   // -----------------------------
-  getPrescriptionID: function(id) {
-    return axios.get("/api/prescriptions/" + id);
-  },
+  // getPrescriptionID: function(id) {
+  //   return axios.get("/api/prescriptions/" + id);
+  // },
   // -----------------------------
   // DELETES PRESCRIPTION BY ID
   // -----------------------------
-  deletePrescriptionID: function(id) {
-    return axios.delete("/api/update-prescriptions/" + id);
-  },
+  // deletePrescriptionID: function(id) {
+  //   return axios.delete("/api/update-prescriptions/" + id);
+  // },
   // ---------------------------------------
   // SAVES PRESCRIPTION TO THE DATABASE  
   // ---------------------------------------
