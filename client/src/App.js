@@ -10,11 +10,11 @@ import NavComponent from "./components/Nav";
 // ---------------------------------
 // IMPORTING PAGES
 // ---------------------------------
-import Calendar from "./pages/Calendar";
+// import Calendar from "./pages/Calendar";
 import Form from "./pages/Form";
-import Prescriptions from "./pages/Prescriptions";
-import Login from "./pages/Login";
-import Signup from "./pages/Signup"
+// import Prescriptions from "./pages/Prescriptions";
+// import Login from "./pages/Login";
+// import Signup from "./pages/Signup"
 
 
 // ===========================================================================
