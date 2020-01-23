@@ -1,16 +1,19 @@
 import React from "react";
+import "./style.css";
 // =========================================================================================================
+
+
 export function General() {
   return (
     <div className="card">
       <div className="card-header" id="headingOne">
         <h2 class="mb-0">
           <button
-            class="btn btn-link"
+            className="btn btn-link"
             type="button"
             data-toggle="collapse"
             data-target="#collapseOne"
-            aria-expanded="true"
+            aria-expanded="false"
             aria-controls="collapseOne"
           >
             General
@@ -19,19 +22,19 @@ export function General() {
       </div>
       <div
         id="collapseOne"
-        class="collapse show"
+        className="collapse show"
         aria-labelledby="headingOne"
         data-parent="#careTabs"
       >
-        <div class="card-body">
+        <div className="card-body">
           <form>
             <div className="form-group">
               <label for="formGroupExampleInput">First Name</label>
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 id="formGroupExampleInput"
-                placeholder="First Name"
+                placeholder=""
               ></input>
             </div>
 
@@ -39,9 +42,9 @@ export function General() {
               <label for="formGroupExampleInput">Last Name</label>
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 id="formGroupExampleInput"
-                placeholder="Last Name"
+                placeholder=""
               ></input>
             </div>
 
@@ -50,7 +53,7 @@ export function General() {
               <label for="formGroupExampleInput">Date of Birth</label>
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 id="formGroupExampleInput"
                 placeholder="YYYY-MM-DD"
               ></input>
@@ -60,7 +63,7 @@ export function General() {
               <label for="formGroupExampleInput">Date of Birth</label>
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 id="formGroupExampleInput"
                 placeholder="YYYY-MM-DD"
               ></input>
@@ -68,10 +71,11 @@ export function General() {
 
             <div className="form-group">
               <label for="formGroupExampleInput">Gender</label>
-              <select class="custom-select" id="inputGroupSelect01">
+              <select className="custom-select" id="inputGroupSelect01">
                 <option selected>Choose...</option>
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
+                <option value="Other">Other</option>
               </select>
             </div>
 
@@ -79,7 +83,7 @@ export function General() {
               <label for="formGroupExampleInput">Medicare Number</label>
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 id="formGroupExampleInput"
                 placeholder="0000-000-0000"
               ></input>
@@ -89,7 +93,7 @@ export function General() {
               <label for="formGroupExampleInput">Military ID</label>
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 id="formGroupExampleInput"
                 placeholder="0000-000-0000"
               ></input>
@@ -99,7 +103,7 @@ export function General() {
               <label for="formGroupExampleInput">Weight</label>
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 id="formGroupExampleInput"
                 placeholder="000"
               ></input>
@@ -107,7 +111,7 @@ export function General() {
 
             <div className="form-group">
               <label for="formGroupExampleInput">Blood Type</label>
-              <select class="custom-select" id="inputGroupSelect01">
+              <select className="custom-select" id="inputGroupSelect01">
                 <option selected>Choose...</option>
                 <option value="O-Negative">O Negative</option>
                 <option value="O-Positive">O Positive</option>
@@ -130,13 +134,13 @@ export function Allergies() {
   return (
     <div className="card">
       <div className="card-header" id="headingTwo">
-        <h2 class="mb-0">
+        <h2 className="mb-0">
           <button
             class="btn btn-link"
             type="button"
             data-toggle="collapse"
             data-target="#collapseTwo"
-            aria-expanded="true"
+            aria-expanded="false"
             aria-controls="collapseTwo"
           >
             Allergies
@@ -145,7 +149,7 @@ export function Allergies() {
       </div>
       <div
         id="collapseTwo"
-        class="collapse show"
+        className="collapse show"
         aria-labelledby="headingTwo"
         data-parent="#careTabs"
       >
@@ -155,18 +159,18 @@ export function Allergies() {
               <label for="formGroupExampleInput">Medication Allergies</label>
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 id="formGroupExampleInput"
-                placeholder="Seperate with commmas"
+                placeholder="Seperate with commmas."
               ></input>
             </div>
             <div className="form-group">
               <label for="formGroupExampleInput">Food Allergies</label>
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 id="formGroupExampleInput"
-                placeholder="Seperate with commmas"
+                placeholder="Seperate with commmas."
               ></input>
             </div>
           </form>
@@ -180,13 +184,13 @@ export function SpecialNeeds() {
   return (
     <div className="card">
       <div className="card-header" id="headingThree">
-        <h2 class="mb-0">
+        <h2 className="mb-0">
           <button
-            class="btn btn-link"
+            className="btn btn-link"
             type="button"
             data-toggle="collapse"
             data-target="#collapseThree"
-            aria-expanded="true"
+            aria-expanded="false"
             aria-controls="collapseThree"
           >
             Special Needs
@@ -195,61 +199,69 @@ export function SpecialNeeds() {
       </div>
       <div
         id="collapseThree"
-        class="collapse show"
+        className="collapse show"
         aria-labelledby="headingThree"
         data-parent="#careTabs"
       >
-        <div class="card-body">
+
+        <br></br>
+
+        <h6>Select "Yes" for those that apply.</h6>
+
+        <div className="card-body">
           <form>
+
             <div className="form-group">
-              <label for="formGroupExampleInput">Disabilities</label>
+              <label for="exampleFormControlSelect1">Glasses</label>
+              <select className="form-control" id="exampleFormControlSelect1">
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+              </select>
+            </div>
+
+            <div className="form-group">
+              <label for="exampleFormControlSelect1">Dentures</label>
+              <select className="form-control" id="exampleFormControlSelect1">
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+              </select>
+            </div>
+
+            <div className="form-group">
+              <label for="exampleFormControlSelect1">Cane/Walker</label>
+              <select className="form-control" id="exampleFormControlSelect1">
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+              </select>
+            </div>
+
+            <div className="form-group">
+              <label for="exampleFormControlSelect1">Wheelchair</label>
+              <select className="form-control" id="exampleFormControlSelect1">
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+              </select>
+            </div>
+
+            <div className="form-group">
+              <label for="exampleFormControlSelect1">Hearing Aid</label>
+              <select className="form-control" id="exampleFormControlSelect1">
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+              </select>
+            </div>
+
+            <div className="form-group">
+              <label for="formGroupExampleInput">Other Disabilities</label>
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 id="formGroupExampleInput"
-                placeholder="Seperate with commmas"
+                placeholder="Seperate with commmas."
               ></input>
             </div>
 
-            <div class="form-group">
-              <label for="exampleFormControlSelect1">Glasses</label>
-              <select class="form-control" id="exampleFormControlSelect1">
-                <option value="true">Yes</option>
-                <option value="false">No</option>
-              </select>
-            </div>
 
-            <div class="form-group">
-              <label for="exampleFormControlSelect1">Dentures</label>
-              <select class="form-control" id="exampleFormControlSelect1">
-                <option value="true">Yes</option>
-                <option value="false">No</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="exampleFormControlSelect1">Cane/Walker</label>
-              <select class="form-control" id="exampleFormControlSelect1">
-                <option value="true">Yes</option>
-                <option value="false">No</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="exampleFormControlSelect1">Wheelchair</label>
-              <select class="form-control" id="exampleFormControlSelect1">
-                <option value="true">Yes</option>
-                <option value="false">No</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="exampleFormControlSelect1">Hearing Aid</label>
-              <select class="form-control" id="exampleFormControlSelect1">
-                <option value="true">Yes</option>
-                <option value="false">No</option>
-              </select>
-            </div>
           </form>
         </div>
       </div>
@@ -262,13 +274,13 @@ export function Surgeries() {
   return (
     <div className="card">
       <div className="card-header" id="headingFour">
-        <h2 class="mb-0">
+        <h2 className="mb-0">
           <button
-            class="btn btn-link"
+            className="btn btn-link"
             type="button"
             data-toggle="collapse"
             data-target="#collapseFour"
-            aria-expanded="true"
+            aria-expanded="false"
             aria-controls="collapseFour"
           >
             Surgeries
@@ -277,14 +289,14 @@ export function Surgeries() {
       </div>
       <div
         id="collapseFour"
-        class="collapse show"
+        className="collapse show"
         aria-labelledby="headingFour"
         data-parent="#careTabs"
       >
-        <div class="card-body">
+        <div className="card-body">
           <button
             type="button"
-            class="btn btn-primary"
+            className="btn btn-primary"
             data-toggle="modal"
             data-target="#exampleModal"
           >
@@ -292,35 +304,35 @@ export function Surgeries() {
           </button>
 
           <div
-            class="modal fade"
+            className="modal fade"
             id="exampleModal"
             tabindex="-1"
             role="dialog"
             aria-labelledby="exampleModalLabel"
             aria-hidden="true"
           >
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">
+            <div className="modal-dialog" role="document">
+              <div className="modal-content">
+                <div className="modal-header">
+                  <h5 className="modal-title" id="exampleModalLabel">
                     Surgery
                   </h5>
                   <button
                     type="button"
-                    class="close"
+                    className="close"
                     data-dismiss="modal"
                     aria-label="Close"
                   >
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
-                <div class="modal-body">
+                <div className="modal-body">
                   <form>
                     <div className="form-group">
                       <label for="formGroupExampleInput">Type of Surgery</label>
                       <input
                         type="text"
-                        class="form-control"
+                        className="form-control"
                         id="formGroupExampleInput"
                         placeholder=""
                       ></input>
@@ -329,7 +341,7 @@ export function Surgeries() {
                       <label for="formGroupExampleInput">Name of Surgeon</label>
                       <input
                         type="text"
-                        class="form-control"
+                        className="form-control"
                         id="formGroupExampleInput"
                         placeholder=""
                       ></input>
@@ -338,7 +350,7 @@ export function Surgeries() {
                       <label for="formGroupExampleInput">Surgery Date</label>
                       <input
                         type="text"
-                        class="form-control"
+                        className="form-control"
                         id="formGroupExampleInput"
                         placeholder="YYYY-MM-DD"
                       ></input>
@@ -347,22 +359,22 @@ export function Surgeries() {
                       <label for="formGroupExampleInput">Comments</label>
                       <input
                         type="text"
-                        class="form-control"
+                        className="form-control"
                         id="formGroupExampleInput"
                         placeholder=""
                       ></input>
                     </div>
                   </form>
                 </div>
-                <div class="modal-footer">
+                <div className="modal-footer">
                   <button
                     type="button"
-                    class="btn btn-secondary"
+                    className="btn btn-secondary"
                     data-dismiss="modal"
                   >
                     Close
                   </button>
-                  <button type="button" class="btn btn-primary">
+                  <button type="button" className="btn btn-primary">
                     Save changes
                   </button>
                 </div>
@@ -380,13 +392,13 @@ export function DoctorInformation() {
   return (
     <div className="card">
       <div className="card-header" id="headingFour">
-        <h2 class="mb-0">
+        <h2 className="mb-0">
           <button
-            class="btn btn-link"
+            className="btn btn-link"
             type="button"
             data-toggle="collapse"
             data-target="#collapseFour"
-            aria-expanded="true"
+            aria-expanded="false"
             aria-controls="collapseFour"
           >
             Doctor Information
@@ -395,26 +407,26 @@ export function DoctorInformation() {
       </div>
       <div
         id="collapseFour"
-        class="collapse show"
+        className="collapse show"
         aria-labelledby="headingFour"
         data-parent="#careTabs"
       >
-        <div class="card-body">
+        <div className="card-body">
           <h4>Primary Care Physician</h4>
           <div className="form-group">
             <label for="formGroupExampleInput">Name</label>
             <input
               type="text"
-              class="form-control"
+              className="form-control"
               id="formGroupExampleInput"
-              placeholder="Dr. ..."
+              placeholder=""
             ></input>
           </div>
           <div className="form-group">
             <label for="formGroupExampleInput">Address</label>
             <input
               type="text"
-              class="form-control"
+              className="form-control"
               id="formGroupExampleInput"
               placeholder="Address, City, State, Zip"
             ></input>
@@ -423,7 +435,7 @@ export function DoctorInformation() {
             <label for="formGroupExampleInput">Phone</label>
             <input
               type="text"
-              class="form-control"
+              className="form-control"
               id="formGroupExampleInput"
               placeholder="###-###-####"
             ></input>
@@ -434,16 +446,16 @@ export function DoctorInformation() {
             <label for="formGroupExampleInput">Name</label>
             <input
               type="text"
-              class="form-control"
+              className="form-control"
               id="formGroupExampleInput"
-              placeholder="Dr. ..."
+              placeholder=""
             ></input>
           </div>
           <div className="form-group">
             <label for="formGroupExampleInput">Address</label>
             <input
               type="text"
-              class="form-control"
+              className="form-control"
               id="formGroupExampleInput"
               placeholder="Address, City, State, Zip"
             ></input>
@@ -452,7 +464,7 @@ export function DoctorInformation() {
             <label for="formGroupExampleInput">Phone</label>
             <input
               type="text"
-              class="form-control"
+              className="form-control"
               id="formGroupExampleInput"
               placeholder="###-###-####"
             ></input>
@@ -463,16 +475,16 @@ export function DoctorInformation() {
             <label for="formGroupExampleInput">Name</label>
             <input
               type="text"
-              class="form-control"
+              className="form-control"
               id="formGroupExampleInput"
-              placeholder="Dr. ..."
+              placeholder=""
             ></input>
           </div>
           <div className="form-group">
             <label for="formGroupExampleInput">Address</label>
             <input
               type="text"
-              class="form-control"
+              className="form-control"
               id="formGroupExampleInput"
               placeholder="Address, City, State, Zip"
             ></input>
@@ -481,7 +493,7 @@ export function DoctorInformation() {
             <label for="formGroupExampleInput">Phone</label>
             <input
               type="text"
-              class="form-control"
+              className="form-control"
               id="formGroupExampleInput"
               placeholder="###-###-####"
             ></input>
@@ -490,4 +502,13 @@ export function DoctorInformation() {
       </div>
     </div>
   );
+}
+
+export function SubmitButton() {
+  return (
+    <div id="submit-button">
+      <br></br>
+      <button type="button" className="btn btn-primary" href="/submit-form">Submit</button>
+    </div>
+  )
 }

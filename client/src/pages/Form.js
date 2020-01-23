@@ -3,7 +3,7 @@
 // ---------------------------------
 import React, { Component } from "react";
 import API from "../utils/API";
-import { General, Allergies, SpecialNeeds, Surgeries, DoctorInformation } from "../components/Form";
+import {General, Allergies, SpecialNeeds, Surgeries, DoctorInformation, SubmitButton} from "../components/Form";
 
 // ==================================================================================
 class Form extends Component {
@@ -215,12 +215,13 @@ class Form extends Component {
 
   render() {
     return (
-      <div className="accordion" id="careTabs">
+      <div className="accordion" id="accordionExample">
         <General />
         <Allergies />
         <SpecialNeeds />
         <Surgeries />
         <DoctorInformation />
+        <SubmitButton />
       </div>
     );
   };
