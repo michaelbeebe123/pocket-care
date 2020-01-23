@@ -12,7 +12,10 @@ export default class AppointmentsComponent extends React.Component {
         this.state.show = false 
     }
     handleModal() {
-        this.setState({show:!this.state.show})
+        if (this.state.show = false) {
+            this.setState({show:true})
+        }
+        else {this.setState({show:false})}
     }
 render() {
     return (
