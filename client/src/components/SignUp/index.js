@@ -1,7 +1,8 @@
 import React from "react";
+import "./style.css";
 
 export default function SignupComponent() {
-  // const   classes = useStyles();
+  // const classes = useStyles();
 
   return (
     <section className="view intro-2">
@@ -16,31 +17,6 @@ export default function SignupComponent() {
                   </h2>
                   <hr />
                     <div className="col-md-10">
-                      <div className="row pb-4 d-flex justify-content-center mb-4">
-                        <h4 className="mt-3 mr-4">
-                          <strong>Login with</strong>
-                        </h4>
-
-                        <div className="inline-ul text-center d-flex justify-content-center">
-                          <a className="p-2 m-2 fa-lg tw-ic">
-                            <i className="fab fa-twitter fa-lg indigo-text"></i>
-                          </a>
-                          <a className="p-2 m-2 fa-lg li-ic">
-                            <i className="fab fa-linkedin-in fa-lg indigo-text">
-                              {" "}
-                            </i>
-                          </a>
-                          <a className="p-2 m-2 fa-lg ins-ic">
-                            <i className="fab fa-instagram fa-lg indigo-text">
-                              {" "}
-                            </i>
-                          </a>
-                        </div>
-
-                        <h4 className="mt-3 ml-4">
-                          <strong>or:</strong>
-                        </h4>
-                      </div>
                       <div className="md-form">
                         <i className="fas fa-user prefix"></i>
                         <input
@@ -48,7 +24,7 @@ export default function SignupComponent() {
                           id="orangeForm-name"
                           className="form-control"
                         />
-                        <label for="orangeForm-name">Your name</label>
+                        <label htmlFor="orangeForm-name">Your name</label>
                       </div>
                       <div className="md-form">
                         <i className="fas fa-envelope prefix"></i>
@@ -57,7 +33,7 @@ export default function SignupComponent() {
                           id="orangeForm-email"
                           className="form-control"
                         />
-                        <label for="orangeForm-email">Your email</label>
+                        <label htmlFor="orangeForm-email">Your email</label>
                       </div>
 
                       <div className="md-form">
@@ -67,7 +43,7 @@ export default function SignupComponent() {
                           id="orangeForm-pass"
                           className="form-control"
                         />
-                        <label for="orangeForm-pass">Your password</label>
+                        <label htmlFor="orangeForm-pass">Your password</label>
                       </div>
 
                       <div className="text-center">

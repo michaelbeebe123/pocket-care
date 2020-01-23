@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import SignupComponent from "../components/SignUp";
 
-class SignUp extends Component {
+
+class PillFinder extends Component {
   state = {
     prescriptions: [],
     date: "",
@@ -28,9 +28,9 @@ class SignUp extends Component {
   render() {
     return (
         <div>
-            <SignupComponent/>
+   
         </div>
     );
   }
 }
-export default SignUp;
+export default PillFinder;

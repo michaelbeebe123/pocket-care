@@ -12,6 +12,8 @@ import NavComponent from "./components/Nav";
 // ---------------------------------
 // import Calendar from "./pages/Calendar";
 import Form from "./pages/Form";
+import SignUp from './pages/Signup';
+// import Prescriptions from "./pages/Prescriptions";
 // import Login from "./pages/Login";
 // import Prescriptions from "./pages/Prescriptions";
 
@@ -41,7 +43,9 @@ function App() {
         <Route exact path="/signup" component={SignupComponent} /> */}
         <Route exact path="/home" component={CalendarComponent}/> 
         {/* TODO: ADD ROUTE TO THE FORM */}
-        <Route exact path="/prescriptions" component={prescriptions} />
+        <Route exact path="/form" component={Form} />
+        <Route exact path="/signup" component={SignUp} />
+        {/* <Route exact path="/prescriptions" component={Prescriptions} /> */}
       </Switch>
     </Router>
     );
