@@ -15,4 +15,3 @@ class Calendar extends Component {
     }
 
 }
-

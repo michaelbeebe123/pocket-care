@@ -3,46 +3,40 @@
 // ---------------------------------
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
+import JumbotronComponent from "./components/Jumbotron";
+import NavComponent from "./components/Nav";
+
 // ---------------------------------
 // IMPORTING PAGES
 // ---------------------------------
 // import Calendar from "./pages/Calendar";
-// import Form from "./pages/Form";
-// import Login from "./pages/Login";
+import Form from "./pages/Form";
 // import Prescriptions from "./pages/Prescriptions";
-
-// ---------------------------------
-// IMPORTING COMPONENTS
-// ---------------------------------
-import CalendarComponent from "./components/Calendar";
-import JumbotronComponent from "./components/Jumbotron";
-import NavComponent from "./components/Nav";
-import SignupComponent from "./components/SignUp";
-// import {General, Allergies, SpecialNeeds} from "./components/Form";
-import {Input, FormButton, DeleteButton} from "./components/Prescriptions";
-import Form from './pages/Form';
-// import AppointmentsComponent from "./components/Appointments";
+// import Login from "./pages/Login";
+// import Signup from "./pages/Signup"
 
 
 // ===========================================================================
 
 function App() {
   return (
+    // FIXME: WE DON'T WANT THE JUMBOTRON AND NAV TO DISPLAY ON THE SIGN UP AND LOGIN PAGES, SO 
+    //        THOSE COMPONENTS WILL LIKELY NEED TO GO IN THE SWITCH STATEMENT
     <Router>
-      <div>
+      <Switch>
+        {/* // FIXME: */}
+        {/* <Route exact path="/" component={Signup}/>
+        <Route exact path="/signup" component={Login} />  */}
+      </Switch>
       <JumbotronComponent />
       <NavComponent />
       <Switch>
-        {/* TODO: MAKE THE Login Component and SignupComponent AND GET IT WORKING WITH NO ERRORS */}
-        {/* {/* <Route exact path="/" component={LoginComponent}/> */}
-        <Route exact path="/signup" component={SignupComponent} />
-        <Route exact path="/home" component={CalendarComponent}/> 
-        <Route exact path="/form" component={Form}/>
-        <Route exact path="/prescriptions" component={Input, FormButton, DeleteButton} />
-        {/* FIXME: WE PROBABLY DON'T NEED THIS ROUTE, MOST LIKELY NOT USING AN APPOINTMENTS COMPONENT */}
-        {/* <Route exact path="/appointments" component={AppointmentsComponent} /> */}
+        {/* <Route exact path="/home" component={Calendar}/>  */}
+        {/* TODO: ADD ROUTE TO THE FORM */}
+        <Route exact path="/form" component={Form} />
+        {/* <Route exact path="/prescriptions" component={Prescriptions} /> */}
       </Switch>
-      </div>
     </Router>
     );
 }
