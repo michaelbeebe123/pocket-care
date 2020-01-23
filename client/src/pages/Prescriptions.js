@@ -3,11 +3,8 @@
 import React, { Component } from "react";
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
-import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
-import { List, ListItem } from "../components/List";
-import FormComponent from "../components/Form";
-import { Input, FormButton, DeleteButton} from "../components/Prescriptions"
+import { Input, FormButton} from "../components/Prescriptions"
 class Prescriptions extends Component {
   state = {
     prescriptions: [],
@@ -18,6 +15,7 @@ class Prescriptions extends Component {
   componentDidMount() {
     this.loadPrescriptions();
   }
+
   loadPrescriptions = () => {
     API.getPrescriptions()
       .then(res =>
@@ -25,17 +23,20 @@ class Prescriptions extends Component {
       )
       .catch(err => console.log(err));
   };
+
   deletePrescription = id => {
     API.deletePrescription(id)
-      .then(res => this.loadPrescriptions())
+      .then(() => this.loadPrescriptions())
       .catch(err => console.log(err));
   };
+
   handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({
       [name]: value
     });
   };
+
   handleFormSubmit = event => {
     event.preventDefault();
     if (this.state.date && this.state.phone) {
@@ -44,10 +45,11 @@ class Prescriptions extends Component {
         phone: this.state.phone,
         dosage: this.state.dosage
       })
-        .then(res => this.loadPrescriptions())
+        .then(() => this.loadPrescriptions())
         .catch(err => console.log(err));
     }
   };
+  
   render() {
     return (
       <Container fluid>

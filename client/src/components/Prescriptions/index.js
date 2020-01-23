@@ -7,6 +7,7 @@ export function Input(props) {
       </div>
     );
   }
+  // FIXME: CALLING THIS FormButton WILL LIKELY CAUSE CONFUSION SINCE WE ALSO HAVE A FORM COMPONENT
   export function FormButton(props) {
     return (
       <button {...props} style={{ float: "right", marginBottom: 10 }} className="btn btn-success">
