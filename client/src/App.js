@@ -17,6 +17,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import CalendarComponent from "./components/Calendar";
 import JumbotronComponent from "./components/Jumbotron";
 import NavComponent from "./components/Nav";
+import SignupComponent from "./components/SignUp";
 // import {General, Allergies, SpecialNeeds} from "./components/Form";
 import {Input, FormButton, DeleteButton} from "./components/Prescriptions";
 import Form from './pages/Form';
@@ -33,8 +34,8 @@ function App() {
       <NavComponent />
       <Switch>
         {/* TODO: MAKE THE Login Component and SignupComponent AND GET IT WORKING WITH NO ERRORS */}
-        {/* <Route exact path="/" component={LoginComponent}/>
-        <Route exact path="/signup" component={SignupComponent} /> */}
+        {/* {/* <Route exact path="/" component={LoginComponent}/> */}
+        <Route exact path="/signup" component={SignupComponent} />
         <Route exact path="/home" component={CalendarComponent}/> 
         <Route exact path="/form" component={Form}/>
         <Route exact path="/prescriptions" component={Input, FormButton, DeleteButton} />

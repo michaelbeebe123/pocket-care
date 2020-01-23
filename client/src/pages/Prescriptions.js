@@ -6,7 +6,7 @@ import API from "../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
-import { General, SpecialNeeds, Allergies } from "../components/Form";
+import FormComponent from "../components/Form";
 import { Input, FormButton, DeleteButton} from "../components/Prescriptions"
 class Prescriptions extends Component {
   state = {
@@ -89,7 +89,7 @@ class Prescriptions extends Component {
             <Jumbotron>
               <h1>Current Medications</h1>
             </Jumbotron>
-            {this.state.prescriptions.length ? (
+            {/* {this.state.prescriptions.length ? (
               <List>
                 {this.state.presciptions.map(prescription => (
                   <ListItem key={prescription._id}>
@@ -100,11 +100,11 @@ class Prescriptions extends Component {
                     </Link>
                     <DeleteButton onClick={() => this.deletePrescription(prescription._id)} />
                   </ListItem>
-                ))}
+                ))})
               </List>
-            ) : (
+              (
               <h3>No Results to Display</h3>
-            )}
+            ) */}
           </Col>
         </Row>
       </Container>

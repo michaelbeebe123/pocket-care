@@ -13,6 +13,7 @@ const PORT = process.env.PORT || 3001;
 // CONFIGURING PASSPORT
 // ---------------------------------
 var passport = require('passport');
+const LocalStrategy = require("passport-local").Strategy
 var expressSession = require('express-session');
 app.use(expressSession({secret: 'mySecretKey'}));
 app.use(passport.initialize());
@@ -84,10 +85,9 @@ app.use(routes);
 // ---------------------------------
 // CONNECTING TO THE MONGO DB
 // ---------------------------------
-mongoose.connect(process.env.MONGODB_URI) || "mongodb://localhost/pocket-care"
+mongoose.connect((process.env.MONGODB_URI) || "mongodb://localhost/pocket-care")
 
-app.listen(PORT, function() {
     app.listen(PORT, function() {
         console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`)
     })
-});
+;

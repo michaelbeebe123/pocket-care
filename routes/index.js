@@ -3,8 +3,8 @@
 // ---------------------------------
 const path = require("path");
 const router = require("express").Router();
-const apiRoutes = require("./api");
-
+const apiRoutes = require("./api/care.js");
+var passport = require('passport');
 // ---------------------------------
 // API ROUTES
 // ---------------------------------
