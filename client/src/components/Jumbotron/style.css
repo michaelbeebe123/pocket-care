@@ -4,3 +4,15 @@
     padding-top: 20px;
     background-image: url(https://pfe-getold.s3.amazonaws.com/basic_article/1600x700_0002_gettyimages-587506958.jpg?2vyCbFPuJhdW0wQNIiFGAeuFG4fiXR.N);
 }
+
+.logo-img {
+    width: 20%;
+    height: auto;
+}
+
+.jumbotron-text {
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+    float: right;
+}
