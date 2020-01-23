@@ -3,6 +3,10 @@
 // ---------------------------------
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
+import JumbotronComponent from "./components/Jumbotron";
+import NavComponent from "./components/Nav";
+
 // ---------------------------------
 // IMPORTING PAGES
 // ---------------------------------
@@ -17,10 +21,13 @@ import Form from "./pages/Form";
 import JumbotronComponent from "./components/Jumbotron";
 import NavComponent from "./components/Nav";
 
+
 // ===========================================================================
 
 function App() {
   return (
+    // FIXME: WE DON'T WANT THE JUMBOTRON AND NAV TO DISPLAY ON THE SIGN UP AND LOGIN PAGES, SO 
+    //        THOSE COMPONENTS WILL LIKELY NEED TO GO IN THE SWITCH STATEMENT
     <Router>
       <JumbotronComponent />
       <NavComponent />
