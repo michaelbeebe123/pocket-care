@@ -3,7 +3,7 @@
 // ---------------------------------
 import React, { Component } from "react";
 import API from "../utils/API";
-import { General, Allergies, SpecialNeeds, DoctorInformation } from "../components/Form";
+import { General, Allergies, SpecialNeeds, Surgeries, DoctorInformation } from "../components/Form";
 
 // ==================================================================================
 class Form extends Component {
@@ -97,15 +97,15 @@ class Form extends Component {
   //   API.getForm()
   //     .then(res =>
   //       this.setState({
-  //         TODO:
+  //         return ()
   //       })
   //     )
   //     .catch(err => console.log(err));
   // };
 
-  componentDidMount() {
-    this.loadForm();
-  }
+  // componentDidMount() {
+  //   this.loadForm();
+  // }
 // ==================================================================================
 
   // NOT SURE WHAT THIS DOES
@@ -123,8 +123,6 @@ class Form extends Component {
   handleFormSubmit = event => {
     event.preventDefault();
     if (this.state.first_name && this.state.last_name) {
-      // FIXME: SHOULD THIS BE FOR THE WHOLE FORM AND NOT JUST THE PRESCRIPTION?
-      //        I THINK WE PROBABLY NEED A FUNCTION FOR BOTH
       API.saveForm({
         first_name: this.state.first_name,
         last_name: this.state.last_name,
@@ -221,6 +219,7 @@ class Form extends Component {
         <General />
         <Allergies />
         <SpecialNeeds />
+        <Surgeries />
         <DoctorInformation />
       </div>
     );
