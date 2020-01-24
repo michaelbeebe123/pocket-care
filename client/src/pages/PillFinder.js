@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 
-
+// find proper endpoints
 class PillFinder extends Component {
   state = {
-    prescriptions: [],
-    date: "",
-    phone: "",
+    medication: [],
+    description: "",
+    risks: "",
     dosage: ""
   };
   componentDidMount() {
