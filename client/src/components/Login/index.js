@@ -6,7 +6,26 @@ import axios from "axios";
 class LoginComponent extends Component
 
  {
-  
+  constructor(props) {
+    super(props);
+    this.state = {email: "", password: ""}
+    this.handleEmailChange = this.handleEmailChange.bind(this);
+    this.handlePasswordChange = this.handlePasswordChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+handleEmailChange(event) {
+  this.setState({email: event.target.value});
+}
+
+handlePasswordChange(event) {
+  this.setState({password: event.target.value});
+}
+
+handleSubmit(event) {
+  alert('A name was submitted: ' + this.state.value);
+  event.preventDefault();
+}
   handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({
@@ -22,9 +41,11 @@ userLogin =()=>{
 console.log("something")
 var email =this.state.email
 var password =this.state.password
-console.log(email,password)
-var send = this.state
-axios.post("/register",send).then((data) =>
+
+const data = {
+  email, password
+}
+axios.post("/api/login", data).then((data) =>
 {
   console.log(data)
 })
@@ -52,6 +73,8 @@ axios.post("/register",send).then((data) =>
                           type="text"
                           id="orangeForm-email"
                           className="form-control"
+                          value={this.state.email}
+                          onChange={this.handleEmailChange}
                         />
                         <label htmlFor="orangeForm-email">Your email</label>
                       </div>
@@ -62,12 +85,14 @@ axios.post("/register",send).then((data) =>
                           type="password"
                           id="orangeForm-pass"
                           className="form-control"
+                          value={this.state.password}
+                          onChange={this.handlePasswordChange}
                         />
                         <label htmlFor="orangeForm-pass">Your password</label>
                       </div>
 
                       <div className="text-center">
-                        <button onClick={this.handleSubmit} className="btn btn-indigo btn-rounded mt-5">
+                        <button onClick={this.userLogin} className="btn btn-indigo btn-rounded mt-5">
                           Log In
                         </button>
                       </div>
