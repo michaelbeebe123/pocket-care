@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import {Component} from "react"
 import axios from "axios";
 
-class SignupComponent extends Component
+class WelcomeComponent extends Component
 
 
  {
@@ -36,46 +36,19 @@ axios.post("/register",send).then((data) =>{
               <div className="card">
                 <div className="card-body">
                   <h2 className="font-weight-bold my-4 text-center mb-5 mt-4 font-weight-bold">
-                    <strong>Sign up</strong>
+                    <strong>Hi! Welcome to Pocket Care.</strong>
                   </h2>
-                  <hr />
-                  <div className="col-md-10">
-                    <div className="md-form">
-                      <i className="fas fa-user prefix"></i>
-                      <input
-                        type="text"
-                        id="orangeForm-name"
-                        className="form-control"
-                      />
-                      <label htmlFor="orangeForm-name">Your name</label>
-                    </div>
-                    <div className="md-form">
-                      <i className="fas fa-envelope prefix"></i>
-                      <input
-                        type="text"
-                        id="orangeForm-email"
-                        className="form-control"
-                      />
-                      <label htmlFor="orangeForm-email">Your email</label>
-                    </div>
-
-                    <div className="md-form">
-                      <i className="fas fa-lock prefix"></i>
-                      <input
-                        type="password"
-                        id="orangeForm-pass"
-                        className="form-control"
-                      />
-                      <label htmlFor="orangeForm-pass">Your password</label>
-                    </div>
-
                       <div className="text-center">
-                        <button className="btn btn-indigo btn-rounded mt-5">
+    
+                        <button className="btn-size btn btn-indigo btn-rounded mt-5">
+                        <Link to="/signup"className={ window.location.pathname === "/login" ? "nav-link active" : "nav-link"}>
                           Sign up
+                    
+                        </Link>
                         </button>
                       </div>
                       <div className="text-center">
-                        <button className="btn btn-indigo btn-rounded mt-5">
+                        <button className="btn-size btn btn-indigo btn-rounded mt-5">
                           <Link to="/login"className={ window.location.pathname === "/login" ? "nav-link active" : "nav-link"}>
                           Members Log in</Link>
 
@@ -87,9 +60,8 @@ axios.post("/register",send).then((data) =>{
               </div>
             </div>
           </div>
-        </div>
     </section>
   );
 }}
 
-export default SignupComponent
+export default WelcomeComponent;
