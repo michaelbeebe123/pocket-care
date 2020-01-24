@@ -2,7 +2,7 @@
 // DEPENDENCIES
 // ---------------------------------
 const mongoose = require("mongoose");
-// const db = require("../models")
+const db = require("../models")
 
 // ---------------------------------
 // CONNECTING TO MONGO DB
@@ -17,13 +17,13 @@ const accountSeed = [
 ];
 
 // FIXME: DO I NEED THE .remove()? WILL THAT CAUSE PROBLEMS?
-// db.Account
-//     .remove({})
-//     .then(data => {
-//         console.log(data.result.n + " records inserted!");
-//         process.exit(0);
-//     })
-//     .catch(err => {
-//         console.error(err);
-//         process.exit(1);
-//     })
+db.Account
+    .remove({})
+    .then(data => {
+        console.log(data.result.n + " records inserted!");
+        process.exit(0);
+    })
+    .catch(err => {
+        console.error(err);
+        process.exit(1);
+    })
