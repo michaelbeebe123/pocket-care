@@ -17,6 +17,7 @@ export default class AppointmentsComponent extends React.Component {
         }
         else {this.setState({show:false})}
     }
+    // dateTime() {}
 render() {
     return (
         <div>
