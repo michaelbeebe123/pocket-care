@@ -17,10 +17,8 @@ import SignUp from './pages/Signup';
 // ---------------------------------
 // IMPORTING COMPONENTS
 // ---------------------------------
-// import JumbotronComponent from "./components/Jumbotron";
-// import NavComponent from "./components/Nav";
-// import FormComponent from "./components/Form";
-// import {Input, FormButton, DeleteButton} from "./components/Prescriptions";
+import JumbotronComponent from "./components/Jumbotron";
+import NavComponent from "./components/Nav";
 import AppointmentsComponent from "./components/Appointments";
 
 
@@ -36,8 +34,8 @@ function App() {
       <AppointmentsComponent />
       <Switch>
         {/* TODO: MAKE THE Login Component and SignupComponent AND GET IT WORKING WITH NO ERRORS */}
-        {/* <Route exact path="/" component={LoginComponent}/>
-        <Route exact path="/signup" component={SignupComponent} /> */}
+        {/* <Route exact path="/" component={LoginComponent}/> */}
+        <Route exact path="/signup" component={SignUp} />
         <Route exact path="/home" component={CalendarComponent}/> 
         {/* TODO: ADD ROUTE TO THE FORM */}
         <Route exact path="calendar" component={CalendarComponent}/>
