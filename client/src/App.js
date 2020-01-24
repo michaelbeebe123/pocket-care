@@ -7,20 +7,20 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // ---------------------------------
 // IMPORTING PAGES
 // ---------------------------------
-// import Calendar from "./pages/Calendar";
+import CalendarComponent from "./pages/Calendar";
 import Form from "./pages/Form";
 import SignUp from './pages/Signup';
 // import Prescriptions from "./pages/Prescriptions";
 // import Login from "./pages/Login";
-// import Prescriptions from "./pages/Prescriptions";
+// import PrescriptionsComponent from "./pages/Prescriptions";
 
 // ---------------------------------
 // IMPORTING COMPONENTS
 // ---------------------------------
-import JumbotronComponent from "./components/Jumbotron";
-import NavComponent from "./components/Nav";
+// import JumbotronComponent from "./components/Jumbotron";
+// import NavComponent from "./components/Nav";
 // import FormComponent from "./components/Form";
-import {Input, FormButton, DeleteButton} from "./components/Prescriptions";
+// import {Input, FormButton, DeleteButton} from "./components/Prescriptions";
 import AppointmentsComponent from "./components/Appointments";
 
 
@@ -40,6 +40,7 @@ function App() {
         <Route exact path="/signup" component={SignupComponent} /> */}
         <Route exact path="/home" component={CalendarComponent}/> 
         {/* TODO: ADD ROUTE TO THE FORM */}
+        <Route exact path="calendar" component={CalendarComponent}/>
         <Route exact path="/form" component={Form} />
         <Route exact path="/signup" component={SignUp} />
         {/* <Route exact path="/prescriptions" component={Prescriptions} /> */}
