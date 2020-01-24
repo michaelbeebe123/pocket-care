@@ -16,42 +16,42 @@ export default function SignupComponent() {
                     <strong>REGISTER</strong>
                   </h2>
                   <hr />
-                    <div className="col-md-10">
-                      <div className="md-form">
-                        <i className="fas fa-user prefix"></i>
-                        <input
-                          type="text"
-                          id="orangeForm-name"
-                          className="form-control"
-                        />
-                        <label htmlFor="orangeForm-name">Your name</label>
-                      </div>
-                      <div className="md-form">
-                        <i className="fas fa-envelope prefix"></i>
-                        <input
-                          type="text"
-                          id="orangeForm-email"
-                          className="form-control"
-                        />
-                        <label htmlFor="orangeForm-email">Your email</label>
-                      </div>
-
-                      <div className="md-form">
-                        <i className="fas fa-lock prefix"></i>
-                        <input
-                          type="password"
-                          id="orangeForm-pass"
-                          className="form-control"
-                        />
-                        <label htmlFor="orangeForm-pass">Your password</label>
-                      </div>
-
-                      <div className="text-center">
-                        <button className="btn btn-indigo btn-rounded mt-5">
-                          Sign up
-                        </button>
-                      </div>
+                  <div className="col-md-10">
+                    <div className="md-form">
+                      <i className="fas fa-user prefix"></i>
+                      <input
+                        type="text"
+                        id="orangeForm-name"
+                        className="form-control"
+                      />
+                      <label htmlFor="orangeForm-name">Your name</label>
                     </div>
+                    <div className="md-form">
+                      <i className="fas fa-envelope prefix"></i>
+                      <input
+                        type="text"
+                        id="orangeForm-email"
+                        className="form-control"
+                      />
+                      <label htmlFor="orangeForm-email">Your email</label>
+                    </div>
+
+                    <div className="md-form">
+                      <i className="fas fa-lock prefix"></i>
+                      <input
+                        type="password"
+                        id="orangeForm-pass"
+                        className="form-control"
+                      />
+                      <label htmlFor="orangeForm-pass">Your password</label>
+                    </div>
+
+                    <div className="text-center">
+                      <button className="btn btn-indigo btn-rounded mt-5">
+                        Sign up
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
