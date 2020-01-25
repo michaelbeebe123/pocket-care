@@ -30,7 +30,6 @@ function App() {
     // FIXME: WE DON'T WANT THE JUMBOTRON AND NAV TO DISPLAY ON THE SIGN UP AND LOGIN PAGES, SO 
     //        THOSE COMPONENTS WILL LIKELY NEED TO GO IN THE SWITCH STATEMENT
     <Router>
-      <NavComponent />
       <JumbotronComponent />
       <NavComponent />
       <Switch>
