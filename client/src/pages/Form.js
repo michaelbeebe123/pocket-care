@@ -167,7 +167,7 @@ class Form extends Component {
     }
     // ==================================================================================
     // ----------------------------------
-    // TODO: FUNCTION THAT DELETES A FORM ITEM
+    // FUNCTION THAT DELETES A FORM ITEM
     // ----------------------------------
     deleteFormItem = (id) => {
       API.deleteFormID(id)
@@ -231,10 +231,9 @@ class Form extends Component {
                   />
                 </div>
 
-                {/* TODO: */}
                 <div className="form-group">
                   <label for="formGroupExampleInput">Gender</label>
-                  <select className="custom-select" id="inputGroupSelect01">
+                  <select className="custom-select" value={this.state.gender} onChange={this.handleInputChange}>
                     <option selected>Choose...</option>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
@@ -275,10 +274,9 @@ class Form extends Component {
                   ></input>
                 </div>
 
-                {/* TODO: */}
                 <div className="form-group">
                   <label for="formGroupExampleInput">Blood Type</label>
-                  <select className="custom-select" id="inputGroupSelect01">
+                  <select className="custom-select" value={this.state.blood_type} onChange={this.handleInputChange}>
                     <option selected>Choose...</option>
                     <option value="O-Negative">O Negative</option>
                     <option value="O-Positive">O Positive</option>
@@ -370,60 +368,61 @@ class Form extends Component {
 
             <div className="card-body">
               <form>
-                {/* TODO: */}
                 <div className="form-group">
                   <label for="exampleFormControlSelect1">Glasses</label>
                   <select
                     className="form-control"
-                    id="exampleFormControlSelect1"
+                    value={this.state.glasses} 
+                    onChange={this.handleInputChange}
                   >
                     <option value="true">Yes</option>
                     <option value="false">No</option>
                   </select>
                 </div>
 
-                {/* TODO: */}
                 <div className="form-group">
                   <label for="exampleFormControlSelect1">Dentures</label>
                   <select
                     className="form-control"
-                    id="exampleFormControlSelect1"
+                    value={this.state.dentures}
+                    onChange={this.handleInputChange}
                   >
                     <option value="true">Yes</option>
                     <option value="false">No</option>
                   </select>
                 </div>
 
-                {/* TODO: */}
                 <div className="form-group">
                   <label for="exampleFormControlSelect1">Cane/Walker</label>
                   <select
                     className="form-control"
                     id="exampleFormControlSelect1"
+                    value={this.state.cane_or_walker}
+                    onChange={this.handleInputChange}
                   >
                     <option value="true">Yes</option>
                     <option value="false">No</option>
                   </select>
                 </div>
 
-                {/* TODO: */}
                 <div className="form-group">
                   <label for="exampleFormControlSelect1">Wheelchair</label>
                   <select
                     className="form-control"
-                    id="exampleFormControlSelect1"
+                    value={this.state.wheelchair}
+                    onChange={this.handleInputChange}
                   >
                     <option value="true">Yes</option>
                     <option value="false">No</option>
                   </select>
                 </div>
 
-                {/* TODO: */}
                 <div className="form-group">
                   <label for="exampleFormControlSelect1">Hearing Aid</label>
                   <select
                     className="form-control"
-                    id="exampleFormControlSelect1"
+                    value={this.state.hearind_aid}
+                    onChange={this.handleInputChange}
                   >
                     <option value="true">Yes</option>
                     <option value="false">No</option>
@@ -444,6 +443,7 @@ class Form extends Component {
             </div>
           </div>
         </div>
+        {/* TODO: */}
         <div className="card">
           <div className="card-header" id="headingFour">
             <h2 className="mb-0">
@@ -466,105 +466,17 @@ class Form extends Component {
             data-parent="#careTabs"
           >
             <div className="card-body">
-              <button
-                type="button"
-                className="btn btn-primary"
-                data-toggle="modal"
-                data-target="#exampleModal"
-              >
-                Add Surgery
-              </button>
-
-              <div
-                className="modal fade"
-                id="exampleModal"
-                tabindex="-1"
-                role="dialog"
-                aria-labelledby="exampleModalLabel"
-                aria-hidden="true"
-              >
-                <div className="modal-dialog" role="document">
-                  <div className="modal-content">
-                    <div className="modal-header">
-                      <h5 className="modal-title" id="exampleModalLabel">
-                        Surgery
-                      </h5>
-                      <button
-                        type="button"
-                        className="close"
-                        data-dismiss="modal"
-                        aria-label="Close"
-                      >
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div className="modal-body">
-                      <form>
-                        <div className="form-group">
-                          <label for="formGroupExampleInput">
-                            Type of Surgery
-                          </label>
-                          <input
-                            className="form-control"
-                            value={this.state.surgery_name}
-                            onChange={this.handleInputChange}
-                            name="surgery_name"
-                            placeholder=""
-                          ></input>
-                        </div>
-                        <div className="form-group">
-                          <label for="formGroupExampleInput">
-                            Name of Surgeon
-                          </label>
-                          <input
-                            className="form-control"
-                            value={this.state.surgion}
-                            onChange={this.handleInputChange}
-                            name="surgion"
-                            placeholder=""
-                          ></input>
-                        </div>
-                        <div className="form-group">
-                          <label for="formGroupExampleInput">
-                            Surgery Date
-                          </label>
-                          <input
-                            className="form-control"
-                            value={this.state.surgery_date}
-                            onChange={this.handleInputChange}
-                            name="surgery_date"
-                            placeholder="YYYY-MM-DD"
-                          ></input>
-                        </div>
-                        <div className="form-group">
-                          <label for="formGroupExampleInput">Comments</label>
-                          <input
-                            className="form-control"
-                            value={this.state.surgery_comments}
-                            onChange={this.handleInputChange}
-                            name="surgery_comments"
-                            placeholder=""
-                          ></input>
-                        </div>
-                      </form>
-                    </div>
-                    <div className="modal-footer">
-                      <button
-                        type="button"
-                        className="btn btn-secondary"
-                        data-dismiss="modal"
-                      >
-                        Close
-                      </button>
-                      <button type="button" className="btn btn-primary">
-                        Save changes
-                      </button>
-                    </div>
-                  </div>
+              <div className="form-group">
+                  <label for="formGroupExampleInput">List Surgeries</label>
+                  <input
+                    className="form-control"
+                    value={this.state.surgery_name}
+                    onChange={this.handleInputChange}
+                    name="surgery_name"
+                    placeholder="Seperate with commmas."
+                  ></input>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
         <div className="card">
           <div className="card-header" id="headingFour">
@@ -686,7 +598,7 @@ class Form extends Component {
             </div>
           </div>
         </div>
-
+      </div>
         <SubmitButton onClick={this.handleFormSubmit}/>
       </div>
     );

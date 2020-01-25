@@ -7,3 +7,6 @@ module.exports = mongoose.model('User',{
     gender: String,
     address: String
 });
+
+const User = mongoose.model("User", accountSchema);
+module.exports = User

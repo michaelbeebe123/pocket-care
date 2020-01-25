@@ -1,20 +1,18 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-// TODO: INPUT ALL OF THE FIELDS THAT WILL PUSHED TO THE DB
-// FIXME: NUMBER OR INTEGER?
 const accountSchema = new Schema({
     id: {type: Number},
     password: {type: String},
-    first_name: {type: String, required: true},
-    last_name: {type: String, required: true},
-    date_of_birth: {type: Date, required: true},
+    first_name: {type: String},
+    last_name: {type: String},
+    date_of_birth: {type: Date},
     gender: {type: String},
     medicare: String,
     military_id: String,
-    weight: {type: String, required: true},
+    weight: {type: String},
     height: {type: String},
-    blood_type: {type: String, required: true},
+    blood_type: {type: String},
     allergies: {
         medication_allergies: {type: String},
         food_allergies: {type: String}

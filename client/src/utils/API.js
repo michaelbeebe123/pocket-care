@@ -63,6 +63,8 @@ export default {
   // ---------------------------------------
   savePrescription: function(prescriptionData) {
     return axios.post("/api/submit-prescription", prescriptionData);
+  },
+  login: function(loginData) {
+    return axios.get("http://localhost:3001/api/login", loginData)
   }
-
 };
