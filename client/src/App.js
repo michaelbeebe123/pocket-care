@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // ---------------------------------
 // IMPORTING PAGES
 // ---------------------------------
-//import CalendarComponent from "./pages/Calendar";
+import Calendar from "./pages/Calendar";
 import Form from "./pages/Form";
 import SignUp from './pages/Signup';
 import LoginForm from './pages/Login';
@@ -36,8 +36,8 @@ function App() {
       <Switch>
         {/* <Route exact path="/" component={LoginComponent}/> */}
         <Route exact path="/signup" component={SignUp} />
-        <Route exact path="/home" component={CalendarComponent}/> 
-        <Route exact path="calendar" component={CalendarComponent}/>
+        <Route exact path="/home" component={Calendar}/> 
+        <Route exact path="calendar" component={Calendar}/>
         <Route exact path="/form" component={Form} />
         <Route exact path="/signup" component={SignUp} />
         <Route exact path="/login" component={LoginForm} />
