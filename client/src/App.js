@@ -35,6 +35,7 @@ function App() {
             <NavComponent />
       <JumbotronComponent />
 
+
       {/*<AppointmentsComponent />*/}
       <Switch>
         {/* TODO: MAKE THE Login Component and SignupComponent AND GET IT WORKING WITH NO ERRORS */}
