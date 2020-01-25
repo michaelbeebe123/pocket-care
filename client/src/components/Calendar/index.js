@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+// import React from 'react'
+// import "../../App.css";
+// import "./style.css";
+// // import React,{Component} from 'react'
+// import FullCalendar from '@fullcalendar/react'
+// import dayGridPlugin from '@fullcalendar/daygrid'
+// import timeGridPlugin from '@fullcalendar/timegrid'
+// import listPlugin from '@fullcalendar/list'
+// import { Button } from 'react-bootstrap';
+// import { createEventInstance } from '@fullcalendar/core';
+
+
+// // import './main.scss' // webpack must be configured to do this
+=======
 import React from 'react'
 import "../../App.css";
 import "./style.css";
@@ -11,6 +26,7 @@ import { Button } from 'react-bootstrap';
 import { createEventInstance } from '@fullcalendar/core';
 
 // import './main.scss' // webpack must be configured to do this
+>>>>>>> 749c4685b8e5d85db22d9ac0e3c2d46a8b777f3a
 
 export default class CalendarComponent extends React.Component {
 
@@ -27,20 +43,24 @@ export default class CalendarComponent extends React.Component {
 // .then(() => this.loadForm())
 // .catch(err => console.log(err));
 
+<<<<<<< HEAD
+// export default class CalendarComponent extends React.Component {
+=======
   }
+>>>>>>> 749c4685b8e5d85db22d9ac0e3c2d46a8b777f3a
 
-  render() {
+//   render() {
    
-      return (
-        <div class="CalendarComponent">
-      <FullCalendar defaultView="dayGridMonth" plugins={[ dayGridPlugin, timeGridPlugin, listPlugin ]} />
+//       return (
+//         <div class="CalendarComponent">
+//       <FullCalendar defaultView="dayGridMonth" plugins={[ dayGridPlugin, timeGridPlugin, listPlugin ]} />
      
-      </div>
+//       </div>
      
-    )
+//     )
    
     
-  }
+//   }
 
-}
+// }
 

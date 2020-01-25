@@ -21,9 +21,7 @@ import LoginForm from './pages/Login';
 // ---------------------------------
 import JumbotronComponent from "./components/Jumbotron";
 import NavComponent from "./components/Nav";
-import WelcomeComponent from "./components/Welcome";
-///import AppointmentsComponent from "./components/Appointments";
-
+// import AppointmentsComponent from "./components/Appointments";
 
 // ===========================================================================
 
@@ -32,18 +30,14 @@ function App() {
     // FIXME: WE DON'T WANT THE JUMBOTRON AND NAV TO DISPLAY ON THE SIGN UP AND LOGIN PAGES, SO 
     //        THOSE COMPONENTS WILL LIKELY NEED TO GO IN THE SWITCH STATEMENT
     <Router>
-            <NavComponent />
+      <NavComponent />
       <JumbotronComponent />
-
-
-      {/*<AppointmentsComponent />*/}
+      <NavComponent />
       <Switch>
-        {/* TODO: MAKE THE Login Component and SignupComponent AND GET IT WORKING WITH NO ERRORS */}
-        <Route exact path="/" component={WelcomeComponent}/>
+        {/* <Route exact path="/" component={LoginComponent}/> */}
         <Route exact path="/signup" component={SignUp} />
-        {/*<Route exact path="/home" component={CalendarComponent}/> */}
-        {/* TODO: ADD ROUTE TO THE FORM */}
-        {/*<Route exact path="calendar" component={CalendarComponent}/>*/}
+        <Route exact path="/home" component={CalendarComponent}/> 
+        <Route exact path="calendar" component={CalendarComponent}/>
         <Route exact path="/form" component={Form} />
         <Route exact path="/signup" component={SignUp} />
         <Route exact path="/login" component={LoginForm} />
