@@ -22,8 +22,6 @@ class Calendar extends Component {
    return(
 
        <Container fluid>
-       <JumbotronComponent />
-       <NavComponent />
            <Row>
                <Col size="md-6">
                <CalendarComponent/>
