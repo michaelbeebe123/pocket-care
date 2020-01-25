@@ -17,9 +17,7 @@ function NavComponent() {
                 <a className="nav-link" href="/prescriptions">Prescriptions</a>
             </li>
 
-            <li className="nav-item" id="login">
-                <button type="button" className="btn btn-outline-primary" href="/">Logout</button>
-            </li>
+
         </ul>
     );
 }

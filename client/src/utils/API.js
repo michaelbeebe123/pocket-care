@@ -29,6 +29,12 @@ export default {
   saveForm: function(data) {
     return axios.post("api/submit-form", data)
   },
+   // -----------------------------
+  // SAVES EVENT TO THE DATABASE
+  // -----------------------------
+  saveEvent: function(){
+    return axios.post("api/submit-appointment")
+  },
 
 
   // =================================================
@@ -57,6 +63,8 @@ export default {
   // ---------------------------------------
   savePrescription: function(prescriptionData) {
     return axios.post("/api/submit-prescription", prescriptionData);
+  },
+  login: function(loginData) {
+    return axios.get("http://localhost:3001/api/login", loginData)
   }
-
 };

@@ -7,9 +7,11 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // ---------------------------------
 // IMPORTING PAGES
 // ---------------------------------
-import CalendarComponent from "./pages/Calendar";
+//import CalendarComponent from "./pages/Calendar";
 import Form from "./pages/Form";
 import SignUp from './pages/Signup';
+import LoginForm from './pages/Login';
+
 // import Prescriptions from "./pages/Prescriptions";
 // import Login from "./pages/Login";
 // import PrescriptionsComponent from "./pages/Prescriptions";
@@ -28,6 +30,7 @@ function App() {
     // FIXME: WE DON'T WANT THE JUMBOTRON AND NAV TO DISPLAY ON THE SIGN UP AND LOGIN PAGES, SO 
     //        THOSE COMPONENTS WILL LIKELY NEED TO GO IN THE SWITCH STATEMENT
     <Router>
+            <NavComponent />
       <JumbotronComponent />
       <NavComponent />
       <Switch>
@@ -37,6 +40,8 @@ function App() {
         <Route exact path="calendar" component={CalendarComponent}/>
         <Route exact path="/form" component={Form} />
         <Route exact path="/signup" component={SignUp} />
+        <Route exact path="/login" component={LoginForm} />
+        {/*<Route exact path="/pillfinder" component={PillFinder} />*/}
         {/* <Route exact path="/prescriptions" component={Prescriptions} /> */}
       </Switch>
     </Router>
