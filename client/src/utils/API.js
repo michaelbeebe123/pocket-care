@@ -8,8 +8,8 @@ export default {
   // -----------------------------
   // GETS ALL FORM ITEMS
   // -----------------------------
-  getForm: function() {
-    return axios.get("/api/form");
+  getForm: function(data) {
+    return axios.get("/api/form", data);
   },
   // -----------------------------
   // GETS FORM ITEM BY ID

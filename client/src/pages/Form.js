@@ -109,7 +109,7 @@ class Form extends Component {
     hearing_aid: this.state.hearing_aid,
     wheelchair: this.state.wheelchair,
     disabilities: this.state.disabilities,
-    surgery_name: this.state,
+    surgery_name: this.state.surgery_name,
     surgion: this.state.surgion,
     surgery_date: this.state.surgery_date,
     surgery_comments: this.state.surgery_comments,
@@ -125,20 +125,20 @@ class Form extends Component {
     other_specialism: this.state.other_specialism,
     other_name: this.state.other_name,
     other_address: this.state.other_address,
-    other_phone: "",
-    pharmacy_address: "",
-    pharmacy_phone: "",
-    insurance_provider: "",
-    insurance_number: "",
-    medication_name: "",
-    medication_purpose: "",
-    medication_dose: "",
-    medication_instruction: "",
-    immunization_name: "",
-    immunization_date: "",
-    immunization_renewal_date: ""
+    other_phone: this.state.other_phone,
+    pharmacy_address: this.state.pharmacy_address,
+    pharmacy_phone: this.state.pharmacy_phone,
+    insurance_provider: this.state.insurance_provider,
+    insurance_number: this.state.insurance_number,
+    medication_name: this.state.medication_name,
+    medication_purpose: this.state.medication_purpose,
+    medication_dose: this.state.medication_dose,
+    medication_instruction: this.state.medication_instruction,
+    immunization_name: this.state.immunization_name,
+    immunization_date: this.state.immunization_date,
+    immunization_renewal_date: this.state.immunization_renewal_date
     })
-      .then(() => {this.loadForm()
+    .then(() => {this.loadForm()
       console.log('hello logan')})
       .catch(err => console.log(err));
   };
@@ -584,7 +584,7 @@ class Form extends Component {
                     className="form-control"
                     value={this.state.physical_therapist_phone}
                     onChange={this.handleInputChange}
-                    name="primary_physician_phone"
+                    name="physical_therapist_phone"
                     placeholder="###-###-####"
                   ></input>
                 </div>
