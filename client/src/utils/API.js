@@ -29,6 +29,12 @@ export default {
   saveForm: function() {
     return axios.post("api/submit-form")
   },
+   // -----------------------------
+  // SAVES EVENT TO THE DATABASE
+  // -----------------------------
+  saveEvent: function(){
+    return axios.post("api/submit-appointment")
+  },
 
 
   // =================================================

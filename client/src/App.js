@@ -17,8 +17,8 @@ import SignUp from './pages/Signup';
 // ---------------------------------
 // IMPORTING COMPONENTS
 // ---------------------------------
-// import JumbotronComponent from "./components/Jumbotron";
-// import NavComponent from "./components/Nav";
+import JumbotronComponent from "./components/Jumbotron";
+import NavComponent from "./components/Nav";
 // import FormComponent from "./components/Form";
 // import {Input, FormButton, DeleteButton} from "./components/Prescriptions";
 import AppointmentsComponent from "./components/Appointments";
@@ -33,7 +33,7 @@ function App() {
     <Router>
       <JumbotronComponent />
       <NavComponent />
-      <AppointmentsComponent />
+      {/* <AppointmentsComponent /> */}
       <Switch>
         {/* TODO: MAKE THE Login Component and SignupComponent AND GET IT WORKING WITH NO ERRORS */}
         {/* <Route exact path="/" component={LoginComponent}/>
