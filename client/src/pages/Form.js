@@ -92,77 +92,51 @@ class Form extends Component {
     console.log("test");
     console.log(this.state);
     API.saveForm({
-      first_name: this.state.first_name,
-      last_name: this.state.last_name,
-      date_of_birth: this.state.date_of_birth,
-      gender: this.state.gender,
-      medicare: this.state.medicare,
-      military_id: this.state.military_id,
-      weight: this.state.weight,
-      height: this.state.height,
-      blood_type: this.state.blood_type,
-      allergies: {
-        medication_allergies: this.state.medication_allergies,
-        food_allergies: this.state.food_allergies
-      },
-      needs: {
-        glasses: this.state.glasses,
-        dentures: this.state.dentures,
-        cane_or_walker: this.state.cane_or_walker,
-        hearind_aid: this.state.hearind_aid,
-        wheelchair: this.state.wheelchair
-      },
-      disabilities: this.state.disabilities,
-      surgeries: {
-        name: this.state.surgery_name,
-        doctor: this.state.surgion,
-        date: this.state.surgery_date,
-        comments: this.state.surgery_comments
-      },
-      doctors: {
-        primary_physician: {
-          name: this.state.primary_physician,
-          address: this.state.primary_physician_address,
-          phone: this.state.primary_physician_phone
-        },
-        specialists: {
-          physical_therapist: {
-            name: this.state.physical_therapist_name,
-            address: this.state.physical_therapist_address,
-            phone: this.state.physical_therapist_phone
-          },
-          dentist: {
-            name: this.state.dentist_name,
-            address: this.state.dentist_address,
-            phone: this.state.dentist_phone
-          },
-          other: {
-            specialism: this.state.other_specialism,
-            name: this.state.other_name,
-            address: this.state.other_address,
-            phone: this.state.other_phone
-          }
-        }
-      },
-      pharmacy: {
-        address: this.state.pharmacy_address,
-        phone: this.state.pharmacy_phone
-      },
-      insurance: {
-        provider: this.state.insurance_provider,
-        account_number: this.state.insurance_number
-      },
-      medication: {
-        name: this.state.medication_name,
-        purpose: this.state.medication_purpose,
-        dose: this.state.medication_dose,
-        instruction: this.state.medication_instruction
-      },
-      immunization: {
-        name: this.state.immunization_name,
-        date: this.state.immunization_date,
-        renewal_date: this.state.immunization_renewal_date
-      }
+    first_name: this.state.first_name,
+    last_name: this.state.last_name,
+    date_of_birth: this.state.date_of_birth,
+    gender: this.state.gender,
+    medicare: this.state.medicare,
+    military_id: this.state.military_id,
+    weight: this.state.weight,
+    height: this.state.height,
+    blood_type: this.state.blood_type,
+    medication_allergies: this.state.medication_allergies,
+    food_allergies: this.state.food_allergies,
+    glasses: this.state.glasses,
+    dentures: this.state.dentures,
+    cane_or_walker: this.state.cane_or_walker,
+    hearing_aid: this.state.hearing_aid,
+    wheelchair: this.state.wheelchair,
+    disabilities: this.state.disabilities,
+    surgery_name: this.state,
+    surgion: this.state.surgion,
+    surgery_date: this.state.surgery_date,
+    surgery_comments: this.state.surgery_comments,
+    primary_physician: this.state.primary_physician,
+    primary_physician_address: this.state.primary_physician_address,
+    primary_physician_phone: this.state.primary_physician_phone,
+    physical_therapist_name: this.state.physical_therapist_name,
+    physical_therapist_address: this.state.physical_therapist_address,
+    physical_therapist_phone: this.state.physical_therapist_phone,
+    dentist_name: this.state.dentist_name,
+    dentist_address: this.state.dentist_address,
+    dentist_phone: this.state.dentist_phone,
+    other_specialism: this.state.other_specialism,
+    other_name: this.state.other_name,
+    other_address: this.state.other_address,
+    other_phone: "",
+    pharmacy_address: "",
+    pharmacy_phone: "",
+    insurance_provider: "",
+    insurance_number: "",
+    medication_name: "",
+    medication_purpose: "",
+    medication_dose: "",
+    medication_instruction: "",
+    immunization_name: "",
+    immunization_date: "",
+    immunization_renewal_date: ""
     })
       .then(() => {this.loadForm()
       console.log('hello logan')})
