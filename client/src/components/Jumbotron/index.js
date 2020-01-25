@@ -5,8 +5,7 @@ import logo from './../../content/logo.png';
 function JumbotronComponent({ children }) {
   return (
     <div className="jumbotron">
-      <img className="logo-img" src={logo}/>
-      <p className="jumbotron-text">Jello!</p>
+      <img className="logo-img" src={logo} alt="" />
     </div>
   );
 }

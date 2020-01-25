@@ -26,8 +26,8 @@ export default {
   // -----------------------------
   // SAVES FORM TO THE DATABASE
   // -----------------------------
-  saveForm: function() {
-    return axios.post("api/submit-form")
+  saveForm: function(data) {
+    return axios.post("api/submit-form", data)
   },
 
 

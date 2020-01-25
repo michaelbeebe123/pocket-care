@@ -8,7 +8,7 @@ router.route("/home")
     .get(careController.findAll)
 
 router.route("/submit-appointment")
-    .post(careController.create)
+    .post(careController.initialize)
 
 router.route("/update-appointment")
     .post(careController.update)
@@ -20,7 +20,7 @@ router.route("/form")
     .get(careController.findAll)
 
 router.route("/submit-form")
-    .post(careController.create)
+    .post(careController.initialize)
 
 router.route("/update-form")
     .post(careController.update)
@@ -32,7 +32,7 @@ router.route("/prescriptions")
     .get(careController.findAll)
 
 router.route("/submit-prescription")
-    .post(careController.create)    
+    .post(careController.initialize)    
 
 router.route("/update-prescriptions")
     .post(careController.update)

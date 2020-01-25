@@ -19,8 +19,7 @@ import SignUp from './pages/Signup';
 // ---------------------------------
 import JumbotronComponent from "./components/Jumbotron";
 import NavComponent from "./components/Nav";
-import AppointmentsComponent from "./components/Appointments";
-
+// import AppointmentsComponent from "./components/Appointments";
 
 // ===========================================================================
 
@@ -31,13 +30,10 @@ function App() {
     <Router>
       <JumbotronComponent />
       <NavComponent />
-      <AppointmentsComponent />
       <Switch>
-        {/* TODO: MAKE THE Login Component and SignupComponent AND GET IT WORKING WITH NO ERRORS */}
         {/* <Route exact path="/" component={LoginComponent}/> */}
         <Route exact path="/signup" component={SignUp} />
         <Route exact path="/home" component={CalendarComponent}/> 
-        {/* TODO: ADD ROUTE TO THE FORM */}
         <Route exact path="calendar" component={CalendarComponent}/>
         <Route exact path="/form" component={Form} />
         <Route exact path="/signup" component={SignUp} />

@@ -17,7 +17,8 @@ module.exports = {
     findByID: function(req,res) {
         // TODO:
     },
-    create: function(req, res) {
+    initialize: function(req, res) {
+        console.log(req.body)
         db.Account
             .create(req.body)
             .then(dbModel => res.json(dbModel))

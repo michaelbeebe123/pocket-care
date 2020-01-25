@@ -2,80 +2,53 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const accountSchema = new Schema({
-    id: {type: Number},
-    password: {type: String},
+    form: [],
     first_name: {type: String},
     last_name: {type: String},
-    date_of_birth: {type: Date},
+    date_of_birth: {type: String},
     gender: {type: String},
-    medicare: String,
-    military_id: String,
+    medicare: {type: String},
+    military_id: {type: String},
     weight: {type: String},
     height: {type: String},
     blood_type: {type: String},
-    allergies: {
-        medication_allergies: {type: String},
-        food_allergies: {type: String}
-    },
-    needs: {
-        glasses: {type: Boolean},
-        dentures: {type: Boolean},
-        cane_or_walker: {type: Boolean},
-        hearind_aid: {type: Boolean},
-        wheelchair: {type: Boolean}
-    },
+    medication_allergies: {type: String},
+    food_allergies: {type: String},
+    glasses: {type: Boolean},
+    dentures: {type: Boolean},
+    cane_or_walker: {type: Boolean},
+    hearing_aid: {type: Boolean},
+    wheelchair: {type: Boolean},
     disabilities: {type: String},
-    surgeries: {
-        name: {type: String},
-        doctor: {type: String},
-        date: {type: Date},
-        comments: {type: String}
-    },
-    doctors: {
-        primary_physician: {
-            name: {type: String},
-            address: {type: String},
-            phone: {type: String}
-        },
-        specialists: {
-            physical_therapist: {
-                name: {type: String},
-                address: {type: String},
-                phone: {type: String}
-            },
-            dentist: {
-                name: {type: String},
-                address: {type: String},
-                phone: {type: String}
-            },
-            other: {
-                specialism: {type: String},
-                name: {type: String},
-                address: {type: String},
-                phone: {type: String}
-            }
-        } 
-    },
-    pharmacy: {
-        address: {type: String},
-        phone: {type: String}
-    },
-    insurance: {
-        provider: {type: String},
-        account_number: {type: String}
-    },
-    medication: {
-        name: {type: String},
-        purpose: {type: String},
-        dose: {type: String},
-        instruction: {type: String}
-    },
-    immunization: {
-        name: {type: String},
-        date: {type: Date},
-        renewal_date: {type: Date}
-    }
+    surgery_name: {type: String},
+    surgion: {type: String},
+    surgery_date: {type: String},
+    surgery_comments: {type: String},
+    primary_physician: {type: String},
+    primary_physician_address: {type: String},
+    primary_physician_phone: {type: String},
+    physical_therapist_name: {type: String},
+    physical_therapist_address: {type: String},
+    physical_therapist_phone: {type: String},
+    dentist_name: {type: String},
+    dentist_address: {type: String},
+    dentist_phone: {type: String},
+    other_specialism: {type: String},
+    other_name: {type: String},
+    other_address: {type: String},
+    other_phone: {type: String},
+    pharmacy_address: {type: String},
+    pharmacy_phone: {type: String},
+    insurance_provider: {type: String},
+    insurance_number: {type: String},
+    medication_name: {type: String},
+    medication_purpose: {type: String},
+    medication_dose: {type: String},
+    medication_instruction: {type: String},
+    immunization_name: {type: String},
+    immunization_date: {type: String},
+    immunization_renewal_date: {type: String}
 })
 
 const Account = mongoose.model("Account", accountSchema);
-module.exports = Account
+module.exports = Account;
