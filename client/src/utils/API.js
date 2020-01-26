@@ -29,6 +29,9 @@ export default {
   saveForm: function(data) {
     return axios.post("api/submit-form", data)
   },
+  updateForm: function(data) {
+    return axios.post("api/update-form", data)
+  },
    // -----------------------------
   // SAVES EVENT TO THE DATABASE
   // -----------------------------
