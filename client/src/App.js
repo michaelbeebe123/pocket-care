@@ -45,7 +45,7 @@ function App() {
         {/*<Route exact path="calendar" component={CalendarComponent}/>*/}
         <Route exact path="/form" component={Form} />
         <Route exact path="/signup" component={SignUp} />
-        <Route exact path="/login" component={LoginForm} />
+        <Route exact path="/login" component={LoginForm}/>
         {/*<Route exact path="/pillfinder" component={PillFinder} />*/}
         {/* <Route exact path="/prescriptions" component={Prescriptions} /> */}
       </Switch>

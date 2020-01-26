@@ -45,7 +45,7 @@ var password =this.state.password
 const data = {
   email, password
 }
-axios.post("/api/login", data).then((data) =>
+axios.post("/login", data).then((data) =>
 {
   console.log(data)
 })

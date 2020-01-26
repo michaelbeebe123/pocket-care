@@ -4,25 +4,32 @@ import { Link } from "react-router-dom";
 import {Component} from "react"
 import axios from "axios";
 
-class SignupComponent extends Component
+class SignupComponent extends Component{
 
-
- {
-  
+  state = {
+  username:"",
+  userpassword:"",
+  useremail :""
+  }
   handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({
       [name]: value
     });
   };
+handleSubmit=()=>{
+this.userSignup()
+}
+
+
 userSignup =()=>{
 console.log("something")
-var name = this.state.name
-var email =this.state.email
-var password =this.state.password
+var name = this.state.username
+var email =this.state.useremail
+var password =this.state.userpassword
 console.log(name,email,password)
 var send = this.state
-axios.post("/register",send).then((data) =>{
+axios.post("/signup",send).then((data) =>{
   console.log(data)
 })
 }
@@ -70,7 +77,7 @@ axios.post("/register",send).then((data) =>{
                     </div>
 
                       <div className="text-center">
-                        <button className="btn btn-indigo btn-rounded mt-5">
+                        <button onClick= {this.handleSubmit} className="btn btn-indigo btn-rounded mt-5">
                           Sign up
                         </button>
                       </div>

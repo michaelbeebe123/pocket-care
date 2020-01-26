@@ -1,11 +1,9 @@
 var mongoose = require('mongoose');
- 
+// mongoose.connect('mongodb://localhost/test', {useNewUrlParser: true});
 module.exports = mongoose.model('User',{
-        username: String,
-    password: String,
-    email: String,
-    gender: String,
-    address: String
+    username: String,
+    userpassword: String,
+    useremail: String,
 });
 
 const User = mongoose.model("User", accountSchema);
