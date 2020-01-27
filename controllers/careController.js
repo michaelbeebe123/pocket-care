@@ -15,9 +15,13 @@ module.exports = {
             .catch(err => res.status(422).json(err));
     },
     findByID: function(req,res) {
-        // TODO:
+        db.Account
+            .findById(req.params.id)
+            .then(dbModel => res.json(dbModel))
+            .catch(err => res.status(422).json(err));
     },
-    create: function(req, res) {
+    initialize: function(req, res) {
+        console.log(req.body)
         db.Account
             .create(req.body)
             .then(dbModel => res.json(dbModel))

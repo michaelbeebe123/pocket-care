@@ -29,7 +29,7 @@ router.post("/login", passport.authenticate("local"), function (req, res) {
     res.json('test');
 });
 
-router.post("/signup", careController.create); 
+router.post("/signup", careController.initialize); 
 
 // function (req, res) {
 //     res.json('test')

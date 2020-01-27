@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import {Component} from "react";
 import axios from "axios";
 class LoginComponent extends Component

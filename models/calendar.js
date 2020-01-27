@@ -1,12 +1,14 @@
-// const mongoose = require("mongoose");
-// const Schema = mongoose.Schema;
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
 
-// const apptSchema = new Schema({
-//   title: { type: String, required: true },
-//   author: { type: String, required: true },
-//   date: { type: Date, default: Date.now }
-// });
+const apptSchema = new Schema({
+  event_type: { type: String, required: true },
+  event_date: { type: Date, default: Date.now },
+  event_start: { type: Date},
+  event_end: { type: Date},
+  event_notes: { type: String, required: true },
+});
 
-// const Appointment = mongoose.model("Appointment", apptSchema);
+const Appointment = mongoose.model("Appointment", apptSchema);
 
-// module.exports = Calendar;
+module.exports = Calendar;
