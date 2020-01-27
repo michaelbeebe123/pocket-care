@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const careController = require("../../controllers/careController");
+// const loginController = require("../../controllers/loginController");
 
 // ---------------------------------------
 // CALENDAR ROUTES FIXME:
@@ -40,6 +41,9 @@ router.route("/update-prescriptions")
 // ---------------------------------------
 // LOGIN & SIGNUP TODO:
 // ---------------------------------------
+// router.route("/login")
+//     .post(loginController.login)
+
 router.route("/")
 
 module.exports = router;
