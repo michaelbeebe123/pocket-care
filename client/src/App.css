@@ -8,3 +8,7 @@ body {
 .card {
     width: 100%;
 }
+
+.btn-primary {
+    color: white !important;
+}
