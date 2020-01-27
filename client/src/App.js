@@ -11,6 +11,7 @@ import Calendar from "./pages/Calendar";
 import Form from "./pages/Form";
 import SignUp from './pages/Signup';
 import LoginForm from './pages/Login';
+import History from "./pages/History";
 
 // import Prescriptions from "./pages/Prescriptions";
 // import Login from "./pages/Login";
@@ -33,15 +34,13 @@ function App() {
       <JumbotronComponent />
       <NavComponent />
       <Switch>
-        {/* <Route exact path="/" component={LoginComponent}/> */}
-        <Route exact path="/signup" component={SignUp} />
-        <Route exact path="/home" component={Calendar}/> 
-        <Route exact path="calendar" component={Calendar}/>
-        <Route exact path="/form" component={Form} />
-        <Route exact path="/signup" component={SignUp} />
-        <Route exact path="/login" component={LoginForm} />
-        {/*<Route exact path="/pillfinder" component={PillFinder} />*/}
-        {/* <Route exact path="/prescriptions" component={Prescriptions} /> */}
+        <Route exact path="/" component={LoginForm}/>
+        <Route path="/login" component={LoginForm}/>
+        <Route eaxt path="/signup" component={SignUp} />
+        <Route path="/home" component={Calendar}/> 
+        <Route path="/calendar" component={Calendar}/>
+        <Route path="/history" component={History} />
+        <Route path="/form" component={Form} />
       </Switch>
     </Router>
     );

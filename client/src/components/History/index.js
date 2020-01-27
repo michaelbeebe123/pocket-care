@@ -1,21 +1,21 @@
-import React from "react";
-import "./style.js"
+// import React from "react";
+// import "./style.js"
 
-class History extends Component {
+// class History extends Component {
     
-    loadForm = () => {
-        API.getForm()
-          .then(res => 
-              this.state.form.push(res.data)
-          )
-          .catch(err => console.log(err))
-      }
+//     loadForm = () => {
+//         API.getForm()
+//           .then(res => 
+//               this.state.form.push(res.data)
+//           )
+//           .catch(err => console.log(err))
+//       }
     
-      componentDidMount = () => {
-        this.loadForm();
-      };
+//       componentDidMount = () => {
+//         this.loadForm();
+//       };
 
-}
+// }
 
 // {this.state.jobs.length > 0 && this.state.jobs.map((job) => {
 //     return (

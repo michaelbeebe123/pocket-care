@@ -2,6 +2,7 @@
 // DEPENDENCIES
 // ---------------------------------
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import API from "../utils/API";
 import { SubmitButton } from "../components/Form";
 
@@ -65,7 +66,8 @@ class Form extends Component {
   loadForm = () => {
     API.getForm()
       .then(res => 
-          this.state.form.push(res.data)
+          this.state.form.push(res.data),
+          console.log(this.state.form.length)
       )
       .catch(err => console.log(err))
   }
@@ -91,6 +93,7 @@ class Form extends Component {
   handleFormSubmit = () => {
     console.log("test");
     console.log(this.state);
+    // FIXME:
     API.saveForm({
     first_name: this.state.first_name,
     last_name: this.state.last_name,
@@ -688,14 +691,14 @@ class Form extends Component {
                   value={this.state.insurance_number}
                   onChange={this.handleInputChange}
                   name="insurance_number"
-                  placeholder="000-000-0000"
+                  placeholder="ex: QQ123456C"
                 ></input>
               </div>
             </div>
           </div>
         </div>
 
-        <SubmitButton onClick={this.handleFormSubmit} />
+        <SubmitButton Link to="/history" onClick={this.handleFormSubmit} />
 
         <br></br>
       </div>
