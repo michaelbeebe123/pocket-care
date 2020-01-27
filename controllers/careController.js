@@ -39,5 +39,17 @@ module.exports = {
             .then(dbModel => dbModel.remove())
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
+    },
+
+    login: function(req, res) {
+        if(req.isAuthenticated()){
+            res.redirect("/home");
+        } else{
+            res.redirect("/login");
+        }
+    },
+    logout: function(req,res) {
+        // TODO: figure out how to connect with passport
     }
+    
 }

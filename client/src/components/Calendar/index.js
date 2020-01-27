@@ -7,8 +7,8 @@ import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
 import listPlugin from '@fullcalendar/list'
 // import API from "../utils/API";
-import { Button } from 'reactstrap';
-import { createEventInstance } from '@fullcalendar/core';
+// import { Button } from 'reactstrap';
+// import { createEventInstance } from '@fullcalendar/core';
 
 // import './main.scss' // webpack must be configured to do this
 

@@ -41,7 +41,7 @@ axios.post("/register",send).then((data) =>{
                       <div className="text-center">
     
                         <button className="btn-size btn btn-indigo btn-rounded mt-5">
-                        <Link to="/signup"className={ window.location.pathname === "/login" ? "nav-link active" : "nav-link"}>
+                        <Link to="/signup"className={ window.location.pathname === "/signup" ? "nav-link active" : "nav-link"}>
                           Sign up
                     
                         </Link>
