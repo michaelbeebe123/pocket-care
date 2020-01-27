@@ -5,6 +5,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import API from "../utils/API";
 import "../App";
+import '../components/History/style.css'
 
 // ==================================================================================
 
@@ -36,7 +37,15 @@ class History extends Component {
           this.state.forms.map(form => {
             return (
               <div className="card">
+                <br></br>
+                <div id="update-button">
+                <button className="btn">
+                    <Link to="/form">Update</Link>
+                </button>
+                </div>
+                <br></br>
                 <ul class="list-group">
+                  <h2 className="mb-0">General</h2>
                   <br></br>
                   <li class="list-group-item">
                     Name: {form.first_name} {form.last_name}
@@ -54,6 +63,8 @@ class History extends Component {
                   <li class="list-group-item">Blood Type: {form.blood_type}</li>
                   <br></br>
 
+                  <h2 className="mb-0">Allergies</h2>
+                  <br></br>
                   <li class="list-group-item">
                     Medication Allergies: {form.medication_allergies}
                   </li>
@@ -62,6 +73,8 @@ class History extends Component {
                   </li>
                   <br></br>
 
+                  <h2 className="mb-0">Disabilities</h2>
+                  <br></br>
                   <li class="list-group-item">Glasses: {form.glasses}</li>
                   <li class="list-group-item">Dentures: {form.dentures}</li>
                   <li class="list-group-item">
@@ -74,11 +87,17 @@ class History extends Component {
                   <li class="list-group-item">
                     Disabilities: {form.disabilities}
                   </li>
+                  <br></br>
+
+                  <h2 className="mb-0">Surgeries</h2>
+                  <br></br>
                   <li class="list-group-item">
                     Surgeries: {form.surgery_name}
                   </li>
                   <br></br>
 
+                  <h2 className="mb-0">Doctor Information</h2>
+                  <br></br>
                   <li class="list-group-item">
                     Primary Care Physician: {form.primary_physician}
                   </li>
@@ -115,6 +134,8 @@ class History extends Component {
                   <li class="list-group-item">Phone: {form.other_phone}</li>
                   <br></br>
 
+                  <h2 className="mb-0">Pharmacy Information</h2>
+                  <br></br>
                   <li class="list-group-item">
                     Pharmacy Address: {form.pharmacy_address}
                   </li>
@@ -123,6 +144,8 @@ class History extends Component {
                   </li>
                   <br></br>
 
+                  <h2 className="mb-0">Insurance Information</h2>
+                  <br></br>
                   <li class="list-group-item">
                     Insurance Provider: {form.insurance_provider}
                   </li>
@@ -134,12 +157,9 @@ class History extends Component {
               </div>
             );
           })}
-        <div id="update-button">
-          <br></br>
-          <button className="btn btn-primary" color="">
-            <Link to="/form">Update</Link>
-          </button>
-        </div>
+        <br></br>
+        
+        <br></br>
       </div>
     );
   }

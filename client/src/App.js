@@ -35,12 +35,12 @@ function App() {
       <NavComponent />
       <Switch>
         <Route exact path="/" component={LoginForm}/>
-        <Route exact path="/login" component={LoginForm}/>
-        <Route exact path="/signup" component={SignUp} />
-        <Route exact path="/home" component={Calendar}/> 
-        <Route exact path="/calendar" component={Calendar}/>
-        <Route exact path="/history" component={History} />
-        <Route exact path="/form" component={Form} />
+        <Route path="/login" component={LoginForm}/>
+        <Route eaxt path="/signup" component={SignUp} />
+        <Route path="/home" component={Calendar}/> 
+        <Route path="/calendar" component={Calendar}/>
+        <Route path="/history" component={History} />
+        <Route path="/form" component={Form} />
       </Switch>
     </Router>
     );

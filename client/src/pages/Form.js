@@ -66,7 +66,8 @@ class Form extends Component {
   loadForm = () => {
     API.getForm()
       .then(res => 
-          this.state.form.push(res.data)
+          this.state.form.push(res.data),
+          console.log(this.state.form.length)
       )
       .catch(err => console.log(err))
   }
