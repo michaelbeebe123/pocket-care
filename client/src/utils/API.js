@@ -2,20 +2,17 @@ import axios from "axios";
 
 export default {
 
-  // =================================================
-  // FIXME: FORM METHODS
-  // =================================================
   // -----------------------------
   // GETS ALL FORM ITEMS
   // -----------------------------
-  getForm: function() {
-    return axios.get("/api/form");
+  getForm: function(data) {
+    return axios.get("/api/form", data);
   },
   // -----------------------------
   // GETS FORM ITEM BY ID
   // -----------------------------
-  getFormID: function() {
-    // return axios.get("/api/form" + id)
+  getFormID: function(id) {
+    return axios.get("/api/form/:" + id)
   },
   // -----------------------------
   // DELETES FORM ITEM BY ID
@@ -23,11 +20,26 @@ export default {
   deleteFormID: function() {
     return axios.post("api/update-form")
   },
+  // -------------------------------------------------------------
+  // GETS MEDICAL HISTORY OF THE FORM OF THE CURRENT LOGGED IN ID
+  // -------------------------------------------------------------
+  getHistoryID: function(id) {
+    return axios.get("/api/history/:" + id)
+  },
   // -----------------------------
   // SAVES FORM TO THE DATABASE
   // -----------------------------
-  saveForm: function() {
-    return axios.post("api/submit-form")
+  saveForm: function(data) {
+    return axios.post("api/submit-form", data)
+  },
+  updateForm: function(data) {
+    return axios.post("api/update-form", data)
+  },
+   // -----------------------------
+  // SAVES EVENT TO THE DATABASE
+  // -----------------------------
+  saveEvent: function(){
+    return axios.post("api/submit-appointment")
   },
 
 

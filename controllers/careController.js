@@ -15,9 +15,13 @@ module.exports = {
             .catch(err => res.status(422).json(err));
     },
     findByID: function(req,res) {
-        // TODO:
+        db.Account
+            .findById(req.params.id)
+            .then(dbModel => res.json(dbModel))
+            .catch(err => res.status(422).json(err));
     },
-    create: function(req, res) {
+    initialize: function(req, res) {
+        console.log(req.body)
         db.Account
             .create(req.body)
             .then(dbModel => res.json(dbModel))
@@ -35,5 +39,17 @@ module.exports = {
             .then(dbModel => dbModel.remove())
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
+    },
+
+    login: function(req, res) {
+        if(req.isAuthenticated()){
+            res.redirect("/home");
+        } else{
+            res.redirect("/login");
+        }
+    },
+    logout: function(req,res) {
+        // TODO: figure out how to connect with passport
     }
+    
 }

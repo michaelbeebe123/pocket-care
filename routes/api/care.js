@@ -1,39 +1,50 @@
 const router = require('express').Router();
 const careController = require("../../controllers/careController");
-const loginController = require("../../controllers/loginController");
+// const loginController = require("../../controllers/loginController");
 
 // ---------------------------------------
-// CALENDAR ROUTES FIXME:
+// CALENDAR ROUTE
 // ---------------------------------------
 router.route("/home")
     .get(careController.findAll)
 
 router.route("/submit-appointment")
-    .post(careController.create)
+    .post(careController.initialize)
 
 router.route("/update-appointment")
     .post(careController.update)
 
 // ---------------------------------------
-// FORM ROUTES FIXME:
+// FORM ROUTES
 // ---------------------------------------
 router.route("/form")
     .get(careController.findAll)
 
-router.route("/submit-form")
-    .post(careController.create)
+router.route("/form/:id")
+    .get(careController.findByID)
 
-router.route("/update-form")
+router.route("/submit-form")
+    .post(careController.initialize)
+
+router.route("/update-form/:id")
     .post(careController.update)
 
 // ---------------------------------------
-// PRESCRIPTION ROUTES FIXME:
+// HISTORY ROUTES
+// ---------------------------------------
+router.route("/api/history/:id")
+    .post(careController.findByID)
+    .put(careController.update)
+    .delete(careController.remove)
+
+// ---------------------------------------
+// PRESCRIPTION ROUTES
 // ---------------------------------------
 router.route("/prescriptions")
     .get(careController.findAll)
 
 router.route("/submit-prescription")
-    .post(careController.create)    
+    .post(careController.initialize)    
 
 router.route("/update-prescriptions")
     .post(careController.update)
@@ -41,10 +52,9 @@ router.route("/update-prescriptions")
 // ---------------------------------------
 // LOGIN & SIGNUP TODO:
 // ---------------------------------------
-router.route("/login")
-    .post(loginController.login)
+// router.route("/login")
+//     .post(loginController.login)
 
 router.route("/")
-
 
 module.exports = router;
