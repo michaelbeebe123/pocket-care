@@ -7,13 +7,13 @@ function NavComponent() {
         <ul className="nav nav-tabs">
 
             <li className="nav-item">
-                <a className="nav-link"><Link to="/home">Home</Link></a>
+                <Link to="/home">Home</Link>
             </li>
             <li className="nav-item">
-                <a className="nav-link"><Link to="/history">Medical History</Link></a>
+                <Link to="/history">Medical History</Link>
             </li>
             <li className="nav-item">
-                <a className="nav-link"><Link to="/prescriptions">Prescriptions</Link></a>
+                <Link to="/prescriptions">Prescriptions</Link>
             </li>
             <li className="nav-item" id="logout">
                 <button className="btn btn-outline-primary"><Link to="/">Logout</Link></button>

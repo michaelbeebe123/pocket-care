@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // ---------------------------------
 // IMPORTING PAGES
 // ---------------------------------
-// import Calendar from "./pages/Calendar";
+import Calendar from "./pages/Calendar";
 import Form from "./pages/Form";
 import SignUp from './pages/Signup';
 import LoginForm from './pages/Login';
