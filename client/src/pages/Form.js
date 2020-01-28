@@ -77,7 +77,6 @@ class Form extends Component {
   };
   // ==================================================================================
 
-  // NOT SURE WHAT THIS DOES
   handleInputChange = event => {
     console.log("test");
     const { name, value } = event.target;

@@ -13,15 +13,12 @@ import SignUp from './pages/Signup';
 import LoginForm from './pages/Login';
 import History from "./pages/History";
 
-// import Prescriptions from "./pages/Prescriptions";
-// import Login from "./pages/Login";
-// import PrescriptionsComponent from "./pages/Prescriptions";
-
 // ---------------------------------
 // IMPORTING COMPONENTS
 // ---------------------------------
 import JumbotronComponent from "./components/Jumbotron";
 import NavComponent from "./components/Nav";
+import Prescriptions from './pages/Prescriptions';
 // import AppointmentsComponent from "./components/Appointments";
 
 // ===========================================================================
@@ -31,8 +28,8 @@ function App() {
     // FIXME: WE DON'T WANT THE JUMBOTRON AND NAV TO DISPLAY ON THE SIGN UP AND LOGIN PAGES, SO 
     //        THOSE COMPONENTS WILL LIKELY NEED TO GO IN THE SWITCH STATEMENT
     <Router>
-      <NavComponent />
       <JumbotronComponent />
+      <NavComponent />
       <Switch>
         <Route exact path="/" component={LoginForm}/>
         <Route path="/login" component={LoginForm}/>
@@ -41,6 +38,7 @@ function App() {
         <Route path="/calendar" component={Calendar}/>
         <Route path="/history" component={History} />
         <Route path="/form" component={Form} />
+        <Route path="/prescriptions" component={Prescriptions} />
       </Switch>
     </Router>
     );
