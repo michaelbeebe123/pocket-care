@@ -43,6 +43,9 @@ router.route("/api/history/:id")
 router.route("/prescriptions")
     .get(careController.findAll)
 
+// router.route("/prescription-form")
+//     .get(careController.findAll)
+
 router.route("/submit-prescription")
     .post(careController.initialize)    
 

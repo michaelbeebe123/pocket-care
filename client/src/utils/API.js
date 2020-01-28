@@ -12,7 +12,7 @@ export default {
   // GETS FORM ITEM BY ID
   // -----------------------------
   getFormID: function(id) {
-    return axios.get("/api/form/:" + id)
+    return axios.get("/api/form/" + id)
   },
   // -----------------------------
   // DELETES FORM ITEM BY ID
@@ -24,7 +24,7 @@ export default {
   // GETS MEDICAL HISTORY OF THE FORM OF THE CURRENT LOGGED IN ID
   // -------------------------------------------------------------
   getHistoryID: function(id) {
-    return axios.get("/api/history/:" + id)
+    return axios.get("/api/history/" + id)
   },
   // -----------------------------
   // SAVES FORM TO THE DATABASE
@@ -49,22 +49,25 @@ export default {
   // -----------------------------
   // GETS ALL PRESCRIPTIONS
   // -----------------------------
-  getprescriptions: function() {
+  getPrescriptions: function() {
     return axios.get("/api/prescriptions");
+  },
+  getPrescriptionForm: function() {
+    return axios.get("/api/prescription-form")
   },
   // -----------------------------
   // GETS PRESCRIPTION BY ID 
   // -----------------------------
   getPrescriptionID: function(id) {
       // FIXME:
-      return axios.get("/api/prescriptions/:" + id);
+      return axios.get("/api/prescriptions/" + id);
   },
   // -----------------------------
   // DELETES PRESCRIPTION BY ID
   // -----------------------------
   deletePrescriptionID: function(id) {
     // FIXME:
-    return axios.delete("/api/update-prescriptions/:" + id);
+    return axios.delete("/api/update-prescriptions/" + id);
   },
   // ---------------------------------------
   // SAVES PRESCRIPTION TO THE DATABASE  
