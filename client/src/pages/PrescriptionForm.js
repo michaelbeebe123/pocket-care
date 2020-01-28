@@ -1,3 +1,6 @@
+
+// TODO: FIXME: I NEED TO GET THE PRESCRIPTIONS AND THE FORM STUFF TO ONLY POST AND GET STUFF FROM A GIVEN ID
+
 // ---------------------------------
 // DEPENDENCIES
 // ---------------------------------
@@ -16,6 +19,7 @@ class PrescriptionForm extends Component {
         index: 0
     }
 
+      // FIXME: NEEDS TO ONLY LOAD PRESCRIPTIONS FOR A GIVEN ID
     loadPrescriptions = () => {
         API.getPrescriptions()
             .then(res =>
@@ -26,6 +30,7 @@ class PrescriptionForm extends Component {
     }
 
     componentDidMount = () => {
+      // FIXME: NEEDS TO ONLY LOAD PRESCRIPTIONS FOR A GIVEN ID
         this.loadPrescriptions();
     }
 

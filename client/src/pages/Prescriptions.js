@@ -1,3 +1,6 @@
+
+// TODO: FIXME: I NEED TO GET THE PRESCRIPTIONS AND THE FORM STUFF TO ONLY POST AND GET STUFF FROM A GIVEN ID
+
 import React, { Component } from "react";
 import API from "../utils/API";
 import {UpdateButton} from "../components/Prescriptions";
@@ -8,6 +11,7 @@ class Prescriptions extends Component {
   };
 
   loadPrescriptions = () => {
+      // FIXME: NEEDS TO GET THE PRESCRIPTIONS FOR A GIVEN ID
     API.getPrescriptions()
       .then(res => {
         console.log("Posts", res.data);
