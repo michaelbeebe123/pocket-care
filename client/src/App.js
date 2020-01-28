@@ -8,7 +8,6 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // IMPORTING PAGES
 // ---------------------------------
 import Calendar from "./pages/Calendar";
-import Welcome from "./pages/Welcome";
 import Form from "./pages/Form";
 import SignUp from './pages/Signup';
 import LoginForm from './pages/Login';
@@ -33,7 +32,7 @@ function App() {
       <JumbotronComponent />
       <NavComponent />
       <Switch>
-        <Route exact path="/" component={Welcome}/>
+        <Route exact path="/" component={LoginForm}/>
         <Route path="/login" component={LoginForm}/>
         <Route eaxt path="/signup" component={SignUp} />
         <Route path="/home" component={Calendar}/> 
