@@ -6,7 +6,7 @@ export function SubmitButton(props) {
   return (
     <div id="submit-button">
       <br></br>
-      <button className="btn btn-primary" {...props}>Submit</button>
+      <button className="btn" {...props}><Link to="/history">Submit</Link></button>
     </div>
   )
 }

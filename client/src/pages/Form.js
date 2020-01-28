@@ -1,8 +1,9 @@
+// TODO: FIXME: I NEED TO GET THE PRESCRIPTIONS AND THE FORM STUFF TO ONLY POST AND GET STUFF FROM A GIVEN ID
+
 // ---------------------------------
 // DEPENDENCIES
 // ---------------------------------
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import API from "../utils/API";
 import { SubmitButton } from "../components/Form";
 
@@ -77,7 +78,6 @@ class Form extends Component {
   };
   // ==================================================================================
 
-  // NOT SURE WHAT THIS DOES
   handleInputChange = event => {
     console.log("test");
     const { name, value } = event.target;
@@ -159,6 +159,7 @@ class Form extends Component {
     return (
       <div className="accordion" id="accordionExample">
         <div className="card">
+          <br></br>
           <div className="card-header" id="headingOne">
             <h2 className="mb-0">
               <button
@@ -698,7 +699,7 @@ class Form extends Component {
           </div>
         </div>
 
-        <SubmitButton Link to="/history" onClick={this.handleFormSubmit} />
+        <SubmitButton onClick={this.handleFormSubmit} />
 
         <br></br>
       </div>

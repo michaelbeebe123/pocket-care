@@ -41,7 +41,8 @@ userLogin =()=>{
 console.log("something")
 var email =this.state.email
 var password =this.state.password
-
+console.log(email)
+console.log(password)
 const data = {
   email, password
 }
