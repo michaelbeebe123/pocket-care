@@ -1,22 +1,91 @@
-// import AppointmentsComponent from "../components/Appointments";
-import React, { Component } from 'react';
-// import { Link } from "react-router-dom";
-// import { Card, CardText } from 'material-ui/Card';
-// import RaisedButton from 'material-ui/RaisedButton';
-// import TextField from 'material-ui/TextField';
-import LoginComponent from "../components/Login";
-// import { render } from 'react-dom';
-class LoginForm extends Component{
-render() {
-return(
-  <div>
-    <LoginComponent/>
-  </div>
-);
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import axios from "axios";
+import { Card, BDiv } from "bootstrap-4-react";
+import { logo } from "../content/logo.png";
+import "../components/SignUp/style.css";
 
-}}
+class LoginForm extends Component {
+  state = {
+    useremail: "",
+    userpassword: ""
+  };
+  componentDidMount() {}
 
- export default LoginForm;
+  handleInputChange = event => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+    });
+  };
+
+  handleSubmit = () => {
+    this.userSignup();
+  };
+
+  userSignup = () => {
+    console.log("something");
+    var email = this.state.useremail;
+    var password = this.state.userpassword;
+    console.log(email, password);
+    var send = this.state;
+    axios.post("/login", send).then(data => {
+      console.log(data);
+    });
+  };
+
+  render() {
+    return (
+      <BDiv w="100" p="3" mb="2" bg="info" text="dark">
+        <Card mx="auto" style={{ width: "auto" }}>
+          <Card.Header>
+            <h2><strong>Members log in here.</strong></h2>
+          </Card.Header>
+          <Card.Image src={logo} />
+          <Card.Body mx="auto">
+            <BDiv className="col-md-10">
+              <BDiv className="md-form">
+                <i className="fas fa-envelope prefix"></i>
+                <input
+                  type="text"
+                  id="orangeForm-email"
+                  className="form-control"
+                />
+                <label htmlFor="orangeForm-email">Your email</label>
+              </BDiv>
+
+              <BDiv className="md-form">
+                <i className="fas fa-lock prefix"></i>
+                <input
+                  type="password"
+                  id="orangeForm-pass"
+                  className="form-control"
+                />
+                <label htmlFor="orangeForm-pass">Your password</label>
+              </BDiv>
+              <BDiv className="text-center">
+                <button className="btn btn-indigo btn-rounded mt-5">
+                  <Link
+                    to="/login"
+                    className={
+                      window.location.pathname === "/login"
+                        ? "nav-link active"
+                        : "nav-link"
+                    }
+                  >
+                    Log in
+                  </Link>
+                </button>
+              </BDiv>
+            </BDiv>
+          </Card.Body>
+        </Card>
+      </BDiv>
+    );
+  }
+}
+
+export default LoginForm;
 
 
 
