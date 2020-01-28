@@ -12,13 +12,14 @@ import Form from "./pages/Form";
 import SignUp from './pages/Signup';
 import LoginForm from './pages/Login';
 import History from "./pages/History";
+import Prescriptions from './pages/Prescriptions';
+import PrescriptionForm from "./pages/PrescriptionForm";
 
 // ---------------------------------
 // IMPORTING COMPONENTS
 // ---------------------------------
 import JumbotronComponent from "./components/Jumbotron";
 import NavComponent from "./components/Nav";
-import Prescriptions from './pages/Prescriptions';
 // import AppointmentsComponent from "./components/Appointments";
 
 // ===========================================================================
@@ -37,8 +38,9 @@ function App() {
         <Route path="/home" component={Calendar}/> 
         <Route path="/calendar" component={Calendar}/>
         <Route path="/history" component={History} />
-        <Route path="/form" component={Form} />
+        <Route exact path="/form" component={Form} />
         <Route path="/prescriptions" component={Prescriptions} />
+        <Route path="/prescription-form" component={PrescriptionForm} />
       </Switch>
     </Router>
     );

@@ -1,24 +1,27 @@
-// // FIXME:
-// import React from "react";
-// export function Input(props) {
-//     return (
-//       <div className="form-group">
-//         <input className="form-control" {...props} />
-//       </div>
-//     );
-//   }
-//   // FIXME: CALLING THIS FormButton WILL LIKELY CAUSE CONFUSION SINCE WE ALSO HAVE A FORM COMPONENT
-//   export function FormButton(props) {
-//     return (
-//       <button {...props} style={{ float: "right", marginBottom: 10 }} className="btn btn-success">
-//         {props.children}
-//       </button>
-//     );
-//   }
-//   export function DeleteButton(props) {
-//     return (
-//       <span className="delete-btn" {...props} role="button" tabIndex="0">
-//         ✗
-//       </span>
-//     );
-//   }
+import React from "react";
+import { Link } from "react-router-dom";
+// import "./style.css";
+// =========================================================================================================
+// class PrescriptionComponent extends React.Component {
+  
+
+ export function UpdateButton(props) {
+    return (
+      <div id="update-button">
+        <br></br>
+        <button className="btn" {...props}><Link to="/prescription-form">Update</Link></button>
+      </div>
+    )
+  }
+
+  export function SubmitButton(props) {
+    return (
+      <div id="submit-button">
+        <br></br>
+        <button className="btn" {...props}><Link to="/prescriptions">Submit</Link></button>
+      </div>
+    )
+  }
+// }
+
+// export default PrescriptionComponent;
