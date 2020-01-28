@@ -1,3 +1,10 @@
 a {
     color: #6379a2;
 }
+
+
+.logo-img {
+    width: 10rem;
+    height: auto;
+    position: sticky;
+}
