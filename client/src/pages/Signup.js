@@ -4,23 +4,35 @@ import axios from "axios";
 // import SignupComponent from "../components/SignUp";
 
 class SignUp extends Component {
-  state = {
+
+  constructor(props)
+{
+  super(props);
+  this.state = {
     username: "",
     useremail: "",
     userpassword: ""
-  };
-  componentDidMount() {
-
   }
 
+  this.handlePasswordChange = this.handlePasswordChange.bind(this);
 
+  this.handleUsernameChange = this.handleUsernameChange.bind(this);
 
-  handleInputChange = event => {
-    const { name, value } = event.target;
-    this.setState({
-      [name]: value
-    });
-  };
+  this.handleUseremailChange = this.handleUseremailChange.bind(this);
+} 
+
+handlePasswordChange(event) {
+  this.setState({userpassword: event.target.value});
+}
+
+handleUsernameChange(event) {
+  this.setState({username: event.target.value});
+}
+
+handleUseremailChange(event){
+  this.setState({useremail:
+  event.target.value});
+}
 
   handleSubmit=()=>{
     this.userSignup()
@@ -28,7 +40,6 @@ class SignUp extends Component {
     
     
     userSignup =()=>{
-    console.log("something")
     var name = this.state.username
     var email =this.state.useremail
     var password =this.state.userpassword
@@ -59,6 +70,8 @@ render() {
                         type="text"
                         id="orangeForm-name"
                         className="form-control"
+                        value={this.state.username}
+                        onChange={this.handleUsernameChange}
                       />
                       <label htmlFor="orangeForm-name">Your name</label>
                     </div>
@@ -68,6 +81,8 @@ render() {
                         type="text"
                         id="orangeForm-email"
                         className="form-control"
+                        value={this.state.useremail}
+                        onChange={this.handleUseremailChange}
                       />
                       <label htmlFor="orangeForm-email">Your email</label>
                     </div>
@@ -78,6 +93,8 @@ render() {
                         type="password"
                         id="orangeForm-pass"
                         className="form-control"
+                        value={this.state.userpassword}
+                        onChange={this.handlePasswordChange}
                       />
                       <label htmlFor="orangeForm-pass">Your password</label>
                     </div>
