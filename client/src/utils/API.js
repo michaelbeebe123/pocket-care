@@ -24,7 +24,8 @@ export default {
   // GETS MEDICAL HISTORY OF THE FORM OF THE CURRENT LOGGED IN ID
   // -------------------------------------------------------------
   getHistoryID: function(id) {
-    return axios.get("/api/history/" + id)
+    console.log(id)
+    return axios.get("/api/history/:" + id)
   },
   // -----------------------------
   // SAVES FORM TO THE DATABASE

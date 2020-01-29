@@ -38,8 +38,7 @@ class History extends Component {
       <div key="papa" className="papa">
         <UpdateButton onClick={this.getFormID} />
         <br></br>
-        {this.state.forms.length >= 0 &&
-          this.state.forms.map(form => {
+        {this.state.forms.map(form => {
             return (
               <div className="card">
                 <br></br>
