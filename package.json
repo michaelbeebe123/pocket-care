@@ -26,6 +26,7 @@
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.19.0",
     "bootstrap": "^4.4.1",
+    "bootstrap-4-react": "0.0.59",
     "express": "^4.17.1",
     "express-generator": "^4.16.1",
     "express-session": "^1.17.0",
@@ -33,6 +34,7 @@
     "mongoose": "^5.8.9",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
+    "react-router-dom": "^5.1.2",
     "validator": "^12.1.0"
   },
   "repository": {

@@ -1,9 +1,13 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import axios from "axios";
-// import SignupComponent from "../components/SignUp";
+import { BDiv, Card, Form } from "bootstrap-4-react";
+import { SignupSubmitButton } from "../components/SignUp";
+import { LoginButton } from "../components/Login";
+import { WelcomeReturnButton } from "../components/ReturnToHome/Index";
+import { logo } from "../content/logo.png";
 
-class SignUp extends Component {
+class SignUpForm extends Component {
 
   constructor(props)
 {
@@ -50,76 +54,64 @@ handleUseremailChange(event){
     })
     }
   
-render() {
-  return (
-    <section className="view intro-2">
-      <div className="mask rgba-gradient">
-        <div className="container h-100 d-flex justify-content-center align-items-center">
-          <div className="row  pt-5 mt-3">
-            <div className="col-md-12">
-              <div className="card">
-                <div className="card-body">
-                  <h2 className="font-weight-bold my-4 text-center mb-5 mt-4 font-weight-bold">
-                    <strong>Sign up</strong>
-                  </h2>
-                  <hr />
-                  <div className="col-md-10">
-                    <div className="md-form">
-                      <i className="fas fa-user prefix"></i>
-                      <input
-                        type="text"
-                        id="orangeForm-name"
-                        className="form-control"
-                        value={this.state.username}
-                        onChange={this.handleUsernameChange}
-                      />
-                      <label htmlFor="orangeForm-name">Your name</label>
-                    </div>
-                    <div className="md-form">
-                      <i className="fas fa-envelope prefix"></i>
-                      <input
-                        type="text"
-                        id="orangeForm-email"
-                        className="form-control"
-                        value={this.state.useremail}
-                        onChange={this.handleUseremailChange}
-                      />
-                      <label htmlFor="orangeForm-email">Your email</label>
-                    </div>
+render() { 
+    return (
+      <BDiv w="100" p="3" mb="2" bg="info" text="dark">
+        <Card mx="auto" style={{ width: "auto" }}>
+          <Card.Header>
+            <h2><strong>Join and Setup Your Pocket</strong></h2>
+          </Card.Header>
+          <Card.Image src={logo} />
+          <Card.Body mx="auto">
 
-                    <div className="md-form">
-                      <i className="fas fa-lock prefix"></i>
-                      <input
-                        type="password"
-                        id="orangeForm-pass"
-                        className="form-control"
-                        value={this.state.userpassword}
-                        onChange={this.handlePasswordChange}
-                      />
-                      <label htmlFor="orangeForm-pass">Your password</label>
-                    </div>
 
-                      <div className="text-center">
-                        <button onClick= {this.handleSubmit} className="btn btn-indigo btn-rounded mt-5">
-                          Sign up
-                        </button>
-                      </div>
-                      <div className="text-center">
-                        <button className="btn btn-indigo btn-rounded mt-5">
-                          <Link to="/login"className={ window.location.pathname === "/login" ? "nav-link active" : "nav-link"}>
-                          Members Log in</Link>
+      <Form>    
 
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-    </section>
-  );
+        <Form.Group>
+          <i className="fas fa-user prefix"></i>
+          <Form.Input type="name" 
+            id="exampleInputName1"
+            className="form-control"
+            value={this.state.username}
+            onChange={this.handleUsernameChange} 
+          />
+          <label htmlFor="exampleInputName1">Your name</label>
+        </Form.Group>
+
+        <Form.Group>
+          <i className="fas fa-envelope prefix"></i>
+          <Form.Input type="email" 
+            id="exampleInputEmail1"
+            className="form-control"
+            value={this.state.useremail}
+            onChange={this.handleUseremailChange}
+          />
+          <label htmlFor="exampleInputName1">Your email</label>
+          <Form.Text text="muted">We'll never share your email with anyone else.</Form.Text>
+        </Form.Group>
+
+        <Form.Group>
+          <i className="fas fa-lock prefix"></i>
+          <Form.Input type="password" 
+            id="exampleInputPass1"
+            className="form-control"
+            value={this.state.userpassword}
+            onChange={this.handleUserpasswordChange}
+          />
+          <label htmlFor="exampleInputName1">Your password</label>
+        </Form.Group>
+        <BDiv content="center">
+        <SignupSubmitButton onClick={this.handleFormSubmit} />
+        <LoginButton />
+        <WelcomeReturnButton />
+        </BDiv>
+      </Form>
+      </Card.Body>
+      </Card>
+      </BDiv>
+
+    );
+  }
 }
-}
-export default SignUp;
+
+export default SignUpForm;

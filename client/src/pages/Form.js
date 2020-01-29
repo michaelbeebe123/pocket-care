@@ -1,5 +1,3 @@
-// TODO: FIXME: I NEED TO GET THE PRESCRIPTIONS AND THE FORM STUFF TO ONLY POST AND GET STUFF FROM A GIVEN ID
-
 // ---------------------------------
 // DEPENDENCIES
 // ---------------------------------
@@ -67,7 +65,7 @@ class Form extends Component {
   loadForm = () => {
     API.getForm()
       .then(res => 
-          this.state.form.push(res.data),
+          this.state.form.push(res.data)
       )
       .catch(err => console.log(err))
   }
@@ -77,6 +75,7 @@ class Form extends Component {
   };
   // ==================================================================================
 
+  // NOT SURE WHAT THIS DOES
   handleInputChange = event => {
     console.log("test");
     const { name, value } = event.target;
@@ -92,7 +91,6 @@ class Form extends Component {
   handleFormSubmit = () => {
     console.log("test");
     console.log(this.state);
-    // FIXME:
     API.saveForm({
     first_name: this.state.first_name,
     last_name: this.state.last_name,
@@ -158,7 +156,6 @@ class Form extends Component {
     return (
       <div className="accordion" id="accordionExample">
         <div className="card">
-          <br></br>
           <div className="card-header" id="headingOne">
             <h2 className="mb-0">
               <button
@@ -691,7 +688,7 @@ class Form extends Component {
                   value={this.state.insurance_number}
                   onChange={this.handleInputChange}
                   name="insurance_number"
-                  placeholder="ex: QQ123456C"
+                  placeholder="000-000-0000"
                 ></input>
               </div>
             </div>
