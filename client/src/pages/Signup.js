@@ -1,112 +1,117 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import axios from "axios";
-import { Card, BDiv } from "bootstrap-4-react";
+import { BDiv, Card, Form } from "bootstrap-4-react";
+import { SignupSubmitButton } from "../components/SignUp";
+import { LoginButton } from "../components/Login";
+import { WelcomeReturnButton } from "../components/ReturnToHome/Index";
 import { logo } from "../content/logo.png";
-import "../components/SignUp/style.css";
 
-class SignUp extends Component {
-  state = {
+class SignUpForm extends Component {
+
+  constructor(props)
+{
+  super(props);
+  this.state = {
     username: "",
     useremail: "",
     userpassword: ""
-  };
-  componentDidMount() {}
+  }
 
-  handleInputChange = event => {
-    const { name, value } = event.target;
-    this.setState({
-      [name]: value
-    });
-  };
+  this.handlePasswordChange = this.handlePasswordChange.bind(this);
 
-  handleSubmit = () => {
-    this.userSignup();
-  };
+  this.handleUsernameChange = this.handleUsernameChange.bind(this);
 
-  userSignup = () => {
-    console.log("something");
-    var name = this.state.username;
-    var email = this.state.useremail;
-    var password = this.state.userpassword;
-    console.log(name, email, password);
-    var send = this.state;
-    axios.post("/signup", send).then(data => {
-      console.log(data);
-    });
-  };
+  this.handleUseremailChange = this.handleUseremailChange.bind(this);
+} 
 
-  render() {
+handlePasswordChange(event) {
+  this.setState({userpassword: event.target.value});
+}
+
+handleUsernameChange(event) {
+  this.setState({username: event.target.value});
+}
+
+handleUseremailChange(event){
+  this.setState({useremail:
+  event.target.value});
+}
+
+  handleSubmit=()=>{
+    this.userSignup()
+    }
+    
+    
+    userSignup =()=>{
+    var name = this.state.username
+    var email =this.state.useremail
+    var password =this.state.userpassword
+    console.log(name,email,password)
+    var send = this.state
+    axios.post("/signup",send).then((data) =>{
+      console.log(data)
+    })
+    }
+  
+render() { 
     return (
       <BDiv w="100" p="3" mb="2" bg="info" text="dark">
         <Card mx="auto" style={{ width: "auto" }}>
           <Card.Header>
-            <h2>Sign Up with Pocket Care</h2>
+            <h2><strong>Join and Setup Your Pocket</strong></h2>
           </Card.Header>
           <Card.Image src={logo} />
           <Card.Body mx="auto">
-            <Card.Title mb="2" text="muted">
-              Your Personal Medical Information at your fingertips.
-            </Card.Title>
 
-            <BDiv className="col-md-10">
-              <BDiv className="md-form">
-                <i className="fas fa-user prefix"></i>
-                <input
-                  type="text"
-                  id="orangeForm-name"
-                  className="form-control"
-                />
-                <label htmlFor="orangeForm-name">Your name</label>
-              </BDiv>
-              <BDiv className="md-form">
-                <i className="fas fa-envelope prefix"></i>
-                <input
-                  type="text"
-                  id="orangeForm-email"
-                  className="form-control"
-                />
-                <label htmlFor="orangeForm-email">Your email</label>
-              </BDiv>
 
-              <BDiv className="md-form">
-                <i className="fas fa-lock prefix"></i>
-                <input
-                  type="password"
-                  id="orangeForm-pass"
-                  className="form-control"
-                />
-                <label htmlFor="orangeForm-pass">Your password</label>
-              </BDiv>
+      <Form>    
 
-              <BDiv className="text-center">
-                <button
-                  onClick={this.handleSubmit}
-                  className="btn btn-indigo btn-rounded mt-5"
-                >
-                  Sign up
-                </button>
-              </BDiv>
-              <BDiv className="text-center">
-                <button className="btn btn-indigo btn-rounded mt-5">
-                  <Link
-                    to="/login"
-                    className={
-                      window.location.pathname === "/login"
-                        ? "nav-link active"
-                        : "nav-link"
-                    }
-                  >
-                    Members Log in
-                  </Link>
-                </button>
-              </BDiv>
-            </BDiv>
-          </Card.Body>
-        </Card>
+        <Form.Group>
+          <i className="fas fa-user prefix"></i>
+          <Form.Input type="name" 
+            id="exampleInputName1"
+            className="form-control"
+            value={this.state.username}
+            onChange={this.handleUsernameChange} 
+          />
+          <label htmlFor="exampleInputName1">Your name</label>
+        </Form.Group>
+
+        <Form.Group>
+          <i className="fas fa-envelope prefix"></i>
+          <Form.Input type="email" 
+            id="exampleInputEmail1"
+            className="form-control"
+            value={this.state.useremail}
+            onChange={this.handleUseremailChange}
+          />
+          <label htmlFor="exampleInputName1">Your email</label>
+          <Form.Text text="muted">We'll never share your email with anyone else.</Form.Text>
+        </Form.Group>
+
+        <Form.Group>
+          <i className="fas fa-lock prefix"></i>
+          <Form.Input type="password" 
+            id="exampleInputPass1"
+            className="form-control"
+            value={this.state.userpassword}
+            onChange={this.handleUserpasswordChange}
+          />
+          <label htmlFor="exampleInputName1">Your email</label>
+        </Form.Group>
+
+        <SignupSubmitButton onClick={this.handleFormSubmit} />
+        <LoginButton />
+        <WelcomeReturnButton />
+
+      </Form>
+      </Card.Body>
+      </Card>
       </BDiv>
+
     );
   }
 }
 
-export default SignUp;
+export default SignUpForm;

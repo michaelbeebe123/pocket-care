@@ -12,7 +12,7 @@ export default {
   // GETS FORM ITEM BY ID
   // -----------------------------
   getFormID: function(id) {
-    return axios.get("/api/form/:" + id)
+    return axios.get("/api/form/" + id)
   },
   // -----------------------------
   // DELETES FORM ITEM BY ID
@@ -24,6 +24,7 @@ export default {
   // GETS MEDICAL HISTORY OF THE FORM OF THE CURRENT LOGGED IN ID
   // -------------------------------------------------------------
   getHistoryID: function(id) {
+    console.log(id)
     return axios.get("/api/history/:" + id)
   },
   // -----------------------------
@@ -49,26 +50,31 @@ export default {
   // -----------------------------
   // GETS ALL PRESCRIPTIONS
   // -----------------------------
-  getprescriptions: function() {
+  getPrescriptions: function() {
     return axios.get("/api/prescriptions");
+  },
+  getPrescriptionForm: function() {
+    return axios.get("/api/prescription-form")
   },
   // -----------------------------
   // GETS PRESCRIPTION BY ID 
   // -----------------------------
   getPrescriptionID: function(id) {
-    // return axios.get("/api/prescriptions/" + id);
+      // FIXME:
+      return axios.get("/api/prescriptions/" + id);
   },
   // -----------------------------
   // DELETES PRESCRIPTION BY ID
   // -----------------------------
   deletePrescriptionID: function(id) {
-    // return axios.delete("/api/update-prescriptions/" + id);
+    // FIXME:
+    return axios.delete("/api/update-prescriptions/" + id);
   },
   // ---------------------------------------
   // SAVES PRESCRIPTION TO THE DATABASE  
   // ---------------------------------------
-  savePrescription: function(prescriptionData) {
-    return axios.post("/api/submit-prescription", prescriptionData);
+  savePrescription: function(data) {
+    return axios.post("/api/submit-prescription", data);
   },
   login: function(loginData) {
     return axios.get("http://localhost:3001/api/login", loginData)

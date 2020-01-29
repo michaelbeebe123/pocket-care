@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import axios from "axios";
 import { Card, BDiv } from "bootstrap-4-react";
 import { logo } from "../content/logo.png";
 import "../components/SignUp/style.css";
+import { LoginSubmitButton } from "../components/Login";
 
 class LoginForm extends Component {
   state = {
@@ -39,7 +39,7 @@ class LoginForm extends Component {
       <BDiv w="100" p="3" mb="2" bg="info" text="dark">
         <Card mx="auto" style={{ width: "auto" }}>
           <Card.Header>
-            <h2><strong>Members log in here.</strong></h2>
+            <h2><strong>Members log in here</strong></h2>
           </Card.Header>
           <Card.Image src={logo} />
           <Card.Body mx="auto">
@@ -64,18 +64,7 @@ class LoginForm extends Component {
                 <label htmlFor="orangeForm-pass">Your password</label>
               </BDiv>
               <BDiv className="text-center">
-                <button className="btn btn-indigo btn-rounded mt-5">
-                  <Link
-                    to="/login"
-                    className={
-                      window.location.pathname === "/login"
-                        ? "nav-link active"
-                        : "nav-link"
-                    }
-                  >
-                    Log in
-                  </Link>
-                </button>
+              <LoginSubmitButton />
               </BDiv>
             </BDiv>
           </Card.Body>
