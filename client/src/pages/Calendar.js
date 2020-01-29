@@ -4,7 +4,7 @@ import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
 import listPlugin from '@fullcalendar/list'                              
-import CalendarComponent from "../components/Calendar";
+// import CalendarComponent from "../components/Calendar";
 // import JumbotronComponent from "../components/Jumbotron";
 // import NavComponent from "../components/Nav";
 import { Col, Row, Container } from "../components/Grid";
