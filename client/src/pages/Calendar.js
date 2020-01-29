@@ -4,7 +4,7 @@ import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
 import listPlugin from '@fullcalendar/list'                              
-import CalendarComponent from "../components/Calendar";
+// import CalendarComponent from "../components/Calendar";
 // import JumbotronComponent from "../components/Jumbotron";
 // import NavComponent from "../components/Nav";
 import { Col, Row, Container } from "../components/Grid";
@@ -74,9 +74,13 @@ class Calendar extends Component {
        <Container fluid>
            <Row>
                <Col size="md-6">
-               <div class="CalendarComponent">
+               <div>
       <FullCalendar defaultView="dayGridMonth" plugins={[ dayGridPlugin, timeGridPlugin, listPlugin ]} 
-       events={[]}
+       events={[
+    { title: event[0].event_type, date: event[0].event_date, start: event[0].event_start, end: event[0].event_end},
+    { title: event[1].event_type, date: event[1].event_date, start: event[1].event_start, end: event[1].event_end },
+    { title: event[2].event_type, date: event[2].event_date, start: event[2].event_start, end: event[2].event_end},
+  ]}
       />
      
       </div>
