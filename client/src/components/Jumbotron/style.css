@@ -1,5 +1,11 @@
 .jumbotron {
     height: 300px;
+    width: 100vw;
+    background-attachment: fixed;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     clear: both;
     padding-top: 20px;
     background-image: url(https://pfe-getold.s3.amazonaws.com/basic_article/1600x700_0002_gettyimages-587506958.jpg?2vyCbFPuJhdW0wQNIiFGAeuFG4fiXR.N);

@@ -4,10 +4,7 @@ import { Link } from "react-router-dom";
 import {Component} from "react"
 import axios from "axios";
 
-class WelcomeComponent extends Component
-
-
- {
+class WelcomeComponent extends Component {
   
   handleInputChange = event => {
     const { name, value } = event.target;
