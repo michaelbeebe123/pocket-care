@@ -4,7 +4,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const routes = require("./routes")
-const bCrypt = require("bcrypt-nodejs");
+// const bCrypt = require("bcrypt-nodejs");
 const app = express();
 
 const PORT = process.env.PORT || 3001;
@@ -86,9 +86,8 @@ app.use(routes);
 // ---------------------------------
 // CONNECTING TO THE MONGO DB
 // ---------------------------------
-mongoose.connect((process.env.MONGODB_URI) || "mongodb://localhost/pocket-care")
+mongoose.connect((process.env.MONGODB_URI) || "mongodb://localhost/pocket-care") 
 
     app.listen(PORT, function() {
         console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`)
     })
-;

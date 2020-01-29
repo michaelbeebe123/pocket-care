@@ -34,7 +34,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={LoginForm}/>
         <Route path="/login" component={LoginForm}/>
-        <Route eaxt path="/signup" component={SignUp} />
+        <Route exact path="/signup" component={SignUp} />
         <Route path="/home" component={Calendar}/> 
         <Route path="/calendar" component={Calendar}/>
         <Route path="/history" component={History} />
