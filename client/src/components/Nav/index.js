@@ -1,27 +1,41 @@
-import React from 'react';
-import { Link } from "react-router-dom";
-import "./style.css"
 
-function NavComponent() {
-    return (
-        <ul className="nav nav-tabs">
+import React, { Component } from 'react';
+import { Collapse, Navbar, Nav, Button, Form  } from 'bootstrap-4-react';
+import "./style.css";
+import { Logout } from '../ReturnToHome/Index';
 
-            <li className="nav-item">
-                <Link className="nav-link" to="/home">Home</Link>
-            </li>
-            <li className="nav-item">
-                <Link className="nav-link" to="/history">Medical History</Link>
-            </li>
-            <li className="nav-item">
-                <Link className="nav-link" to="/prescriptions">Prescriptions</Link>
 
-            </li>
-            <li className="nav-item" id="logout">
-                <button className="btn btn-outline-primary"><Link to="/">Logout</Link></button>
-            </li>
+export default class NavComponent extends Component {
+    render() {
+        {
+            return (
+              <Navbar expand="lg" light bg="light">
+                <Navbar.Brand href="#">
+                  Pocket Care
+                </Navbar.Brand>
+                <Navbar.Toggler target="#navbarSupportedContent" />
+                <Collapse navbar id="navbarSupportedContent">
+                  <Navbar.Nav mr="auto">
 
-        </ul>
-    );
+                    <Nav.Item active>
+                      <Nav.Link href="/home">Home</Nav.Link>
+                    </Nav.Item>
+
+                    <Nav.Item>
+                      <Nav.Link href="/history">Medical History</Nav.Link>
+                    </Nav.Item>
+
+                    <Nav.Item>
+                        <Nav.Link href="/prescription">Prescription</Nav.Link>
+                    </Nav.Item>
+                    
+                  </Navbar.Nav>
+                  <Form inline my="2 lg-0">
+                    <Logout />
+                  </Form>
+                </Collapse>
+              </Navbar>
+            )
+          }
+  }
 }
-
-export default NavComponent;

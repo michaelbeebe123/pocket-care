@@ -98,7 +98,7 @@ render() {
             value={this.state.userpassword}
             onChange={this.handleUserpasswordChange}
           />
-          <label htmlFor="exampleInputName1">Your email</label>
+          <label htmlFor="exampleInputName1">Your password</label>
         </Form.Group>
 
         <SignupSubmitButton onClick={this.handleFormSubmit} />

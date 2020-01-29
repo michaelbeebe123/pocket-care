@@ -33,11 +33,11 @@ function App() {
       <JumbotronComponent />
       <NavComponent />
       <Switch>
-        <Route exact path="/" component={Welcome}/>
-        <Route path="/login" component={LoginForm}/>
+        <Route exact path="/" component={Welcome} />
+        <Route path="/login" component={LoginForm} />
         <Route exact path="/signup" component={SignUpForm} />
-        <Route path="/home" component={Calendar}/> 
-        <Route path="/calendar" component={Calendar}/>
+        <Route path="/home" component={Calendar} /> 
+        <Route path="/calendar" component={Calendar} />
         <Route path="/history" component={History} />
         <Route exact path="/form" component={Form} />
         <Route path="/prescriptions" component={Prescriptions} />

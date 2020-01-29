@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { BDiv, Card } from "bootstrap-4-react";
 import { SignupButton } from "../components/SignUp";
 import { LoginButton } from "../components/Login";
-import { WelcomeReturnButton } from "../components/ReturnToHome/Index";
 import { logo } from "../content/logo.png";
 
 class Welcome extends Component {
@@ -19,7 +18,6 @@ render() {
 
             <SignupButton />
             <LoginButton />
-            <WelcomeReturnButton />
             
           </Card.Body>
         </Card>
