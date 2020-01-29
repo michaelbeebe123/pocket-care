@@ -50,7 +50,13 @@ const accountSchema = new Schema({
     medication_instruction: {type: String},
     immunization_name: {type: String},
     immunization_date: {type: String},
-    immunization_renewal_date: {type: String}
+    immunization_renewal_date: {type: String},
+    event_type: { type: String },
+  event_date: { type: String, default: Date.now },
+  event_start: { type: String},
+  event_end: { type: String},
+  event_notes: { type: String},
+
 })
 
 const Account = mongoose.model("Account", accountSchema);
