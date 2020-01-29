@@ -1,4 +1,4 @@
-
+/* 
     html,
     body,
     header,
@@ -68,7 +68,7 @@
 
     .rgba-gradient {
       background: -webkit-linear-gradient(98deg, rgba(22, 91, 231, 0.5), rgba(255, 32, 32, 0.5) 100%);
-      background: -webkit-gradient(linear, 98deg, from(rgba(22, 91, 231, 0.5)), to(rgba(255, 32, 32, 0.5)));
+      background: -webkit-gradient (linear, 98deg, from(rgba(22, 91, 231, 0.5)), to(rgba(255, 32, 32, 0.5)));
       background: linear-gradient(to 98deg, rgba(22, 91, 231, 0.5), rgba(255, 32, 32, 0.5) 100%);
     }
 
@@ -80,4 +80,4 @@
 
     h6 {
       line-height: 1.7;
-    }
+    } */
