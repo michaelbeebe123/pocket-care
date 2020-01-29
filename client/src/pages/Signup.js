@@ -100,11 +100,11 @@ render() {
           />
           <label htmlFor="exampleInputName1">Your password</label>
         </Form.Group>
-
+        <BDiv content="center">
         <SignupSubmitButton onClick={this.handleFormSubmit} />
         <LoginButton />
         <WelcomeReturnButton />
-
+        </BDiv>
       </Form>
       </Card.Body>
       </Card>

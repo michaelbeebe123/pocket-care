@@ -12,7 +12,7 @@ render() {
           <Card.Header>
             <h2><strong>Welcome to Pocket Care</strong></h2>
           </Card.Header>
-          <Card.Title>Your Personal Medical Assistant at your fingertips</Card.Title>
+          <Card.Title text="center">Your Personal Medical Assistant at your fingertips</Card.Title>
           <Card.Image src={logo} />
           <Card.Body mx="auto">
 

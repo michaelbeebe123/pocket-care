@@ -16,7 +16,7 @@ export function SignupSubmitButton(props) {
   return (
     <div id="signup-submit-button">
       <br></br>
-      <Button info outline className="btn" {...props}><Link to="/home">Sign Up</Link></Button>
+      <Button info outline style={{ px: "60px" }} className="btn" {...props}><Link to="/home">Sign Up</Link></Button>
     </div>
   )
 }
