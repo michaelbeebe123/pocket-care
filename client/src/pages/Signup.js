@@ -96,7 +96,7 @@ render() {
             id="exampleInputPass1"
             className="form-control"
             value={this.state.userpassword}
-            onChange={this.handleUserpasswordChange}
+            onChange={this.handlePasswordChange}
           />
           <label htmlFor="exampleInputName1">Your password</label>
         </Form.Group>

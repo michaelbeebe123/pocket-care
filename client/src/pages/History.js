@@ -9,6 +9,7 @@ import API from "../utils/API";
 import UpdateButton from "../components/History";
 import "../App";
 import '../components/History/style.css'
+const id = "5e321e5f3ec44b02e2d1bce3"
 
 // ==================================================================================
 
@@ -21,7 +22,7 @@ class History extends Component {
   };
 
   loadForm = () => {
-    API.getForm()
+    API.getForm(id)
       .then(res => {
         console.log("Posts", res.data);
         this.setState({
@@ -33,7 +34,9 @@ class History extends Component {
   componentDidMount = () => {
     this.loadForm();
   };
+  
   render() {
+
     return (
       <div key="papa" className="papa">
         <UpdateButton onClick={this.getFormID} />
