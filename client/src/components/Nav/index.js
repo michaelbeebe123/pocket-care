@@ -26,7 +26,7 @@ export default class NavComponent extends Component {
                     </Nav.Item>
 
                     <Nav.Item>
-                        <Nav.Link href="/prescription">Prescription</Nav.Link>
+                        <Nav.Link href="/prescriptions">Prescription</Nav.Link>
                     </Nav.Item>
                     
                   </Navbar.Nav>

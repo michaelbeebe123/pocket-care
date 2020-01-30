@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const careController = require("../../controllers/careController");
 // const loginController = require("../../controllers/loginController");
+const id = "5e321e5f3ec44b02e2d1bce3"
 
 // ---------------------------------------
 // CALENDAR ROUTE
@@ -26,16 +27,15 @@ router.route("/form/:id")
 router.route("/submit-form")
     .post(careController.initialize)
 
-router.route("/update-form/:id")
+router.route(`"/update-form/:id"`)
     .post(careController.update)
 
 // ---------------------------------------
 // HISTORY ROUTES
 // ---------------------------------------
-router.route("/api/history/:id")
-    .post(careController.findByID)
+router.route(`/api/history/:${id}`)
+    .get(careController.findAll)
     .put(careController.update)
-    .delete(careController.remove)
 
 // ---------------------------------------
 // PRESCRIPTION ROUTES

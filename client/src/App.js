@@ -23,12 +23,10 @@ import JumbotronComponent from "./components/Jumbotron";
 import NavComponent from "./components/Nav";
 // import AppointmentsComponent from "./components/Appointments";
 
-// ===========================================================================
 
+// ===========================================================================
 function App() {
   return (
-    // FIXME: WE DON'T WANT THE JUMBOTRON AND NAV TO DISPLAY ON THE SIGN UP AND LOGIN PAGES, SO 
-    //        THOSE COMPONENTS WILL LIKELY NEED TO GO IN THE SWITCH STATEMENT
     <Router>
       <JumbotronComponent />
       <NavComponent />

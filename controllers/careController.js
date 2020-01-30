@@ -1,5 +1,5 @@
 // ==============================================
-// TODO: CONTROLLER METHODS
+// CONTROLLER METHODS
 // ==============================================
 
 const db = require("../models");
@@ -8,6 +8,8 @@ const db = require("../models");
 // METHODS FOR THE FORM
 // ----------------------------------------------
 module.exports = {
+    id: '5e321e5f3ec44b02e2d1bce3',
+
     findAll: function(req, res) {
         db.Account
             .find(req.query)
@@ -29,13 +31,13 @@ module.exports = {
     },
     update: function(req, res) {
         db.Account
-            .findOneAndUpdate( {_id: req.params.id }, req.body )
+            .findOneAndUpdate( id, req.body )
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     },
     remove: function(req, res) {
         db.Account
-            .findById( {_id: req.params.id })
+            .findById( {id: req.params._id })
             .then(dbModel => dbModel.remove())
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
