@@ -4,6 +4,7 @@ import { Card, BDiv } from "bootstrap-4-react";
 import { logo } from "../content/logo.png";
 import "../components/SignUp/style.css";
 import { LoginSubmitButton } from "../components/Login";
+import { WelcomeReturnButton } from "../components/ReturnToHome/Index";
 
 class LoginForm extends Component {
   state = {
@@ -65,6 +66,7 @@ class LoginForm extends Component {
               </BDiv>
               <BDiv className="text-center">
               <LoginSubmitButton />
+              <WelcomeReturnButton />
               </BDiv>
             </BDiv>
           </Card.Body>
