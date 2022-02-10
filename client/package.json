@@ -16,7 +16,7 @@
     "bootstrap-4-react": "0.0.59",
     "css-loader": "^3.4.2",
     "material-ui": "^0.20.2",
-    "node-sass": "^4.13.0",
+    "node-sass": "^7.0.0",
     "npm-lifecycle": "^3.1.4",
     "react": "^16.12.0",
     "react-bootstrap": "^1.0.0-beta.16",
